@@ -1,0 +1,564 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { BadgeCheck, Gem, Repeat } from "lucide-react";
+
+import heroImg from "@/assets/hero-varalakshmi.jpg";
+import necklaceImg from "@/assets/cat-lakshmi-necklace.jpg";
+import banglesImg from "@/assets/cat-temple-bangles.jpg";
+import earringsImg from "@/assets/cat-bridal-earrings.jpg";
+import bridalSetImg from "@/assets/cat-bridal-sets.jpg";
+import craftImg from "@/assets/craft-detail.jpg";
+import storeImg from "@/assets/store-consultation.jpg";
+
+const CANONICAL =
+  "https://www.indriya.com/varalakshmi-vratham-gold-jewellery";
+const TITLE = "Varalakshmi Vratham Gold Jewellery | Indriya";
+const DESCRIPTION =
+  "Discover Varalakshmi Vratham gold jewellery by Indriya, from Lakshmi necklaces and temple bangles to antique earrings for sacred celebrations.";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.indriya.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Temple Jewellery",
+      item: "https://www.indriya.com/temple-jewellery",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Varalakshmi Vratham Gold Jewellery",
+      item: CANONICAL,
+    },
+  ],
+};
+
+export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { name: "robots", content: "index, follow" },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "article" },
+      { property: "og:url", content: CANONICAL },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
+    ],
+    links: [{ rel: "canonical", href: CANONICAL }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbSchema),
+      },
+    ],
+  }),
+  component: VaralakshmiPage,
+});
+
+const navLinks = [
+  { label: "Jewellery", href: "/jewellery" },
+  { label: "Gold", href: "/gold" },
+  { label: "Temple Jewellery", href: "/temple-jewellery" },
+  { label: "Weddings", href: "/weddings" },
+  { label: "Stores", href: "/store-locator" },
+];
+
+const categories = [
+  {
+    title: "Antique Lakshmi Necklaces",
+    image: necklaceImg,
+    alt: "Antique gold necklace with a Lakshmi motif pendant resting on ivory silk",
+    copy: "An antique gold necklace centred on the goddess, finished with kasu-inspired discs and a softly aged lustre made for pooja mornings.",
+    cta: "View Necklaces",
+    href: "/gold-necklaces",
+  },
+  {
+    title: "Temple Jewellery Bangles",
+    image: banglesImg,
+    alt: "Close-up of temple jewellery bangles with intricate Lakshmi-inspired detailing",
+    copy: "Temple jewellery bangles carved with deities and beaded borders, designed to stack quietly or stand alone against silk.",
+    cta: "View Bangles",
+    href: "/gold-bangles",
+  },
+  {
+    title: "Antique Bridal Earrings",
+    image: earringsImg,
+    alt: "Antique bridal earrings styled with a South Indian silk saree",
+    copy: "Antique bridal earrings in jhumka and chandbali silhouettes, weighted for comfort through long ceremonies.",
+    cta: "View Earrings",
+    href: "/gold-earrings",
+  },
+  {
+    title: "South Indian Bridal Jewellery Sets",
+    image: bridalSetImg,
+    alt: "Bride in an ivory silk saree wearing a complete set of South Indian bridal jewellery in antique gold",
+    copy: "Complete south indian bridal jewellery sets — layered haaram, choker, belt and earrings — composed as one considered story.",
+    cta: "View Bridal Sets",
+    href: "/bridal-jewellery",
+  },
+];
+
+const trustCards = [
+  {
+    icon: BadgeCheck,
+    title: "BIS Hallmarked Gold",
+    copy: "Every piece is described with its gold purity and hallmark details.",
+  },
+  {
+    icon: Gem,
+    title: "Transparent Pricing",
+    copy: "Metal rate, making and applicable charges shown clearly before you buy.",
+  },
+  {
+    icon: Repeat,
+    title: "Lifetime Exchange",
+    copy: "Exchange your jewellery as tastes and occasions change, per policy terms.",
+  },
+];
+
+const exploreLinks = [
+  { label: "Temple Jewellery Collection", href: "/temple-jewellery" },
+  { label: "Gold Necklaces", href: "/gold-necklaces" },
+  { label: "Gold Bangles", href: "/gold-bangles" },
+  { label: "Store Locator", href: "/store-locator" },
+];
+
+const faqs = [
+  {
+    q: "What jewellery is traditionally worn for Varalakshmi Vratham?",
+    a: "Families usually choose gold pieces with temple motifs — a Lakshmi pendant or haaram, thick kada or carved bangles, jhumkas, and often a modest waist belt or vanki with a silk saree. Many households also bring out heirloom pieces for the day and pair them with one newer purchase.",
+  },
+  {
+    q: "How do I choose an antique Lakshmi necklace?",
+    a: "Start with length and neckline. A short choker sits well over a high-necked blouse, while a longer haaram suits a draped saree. Then consider the finish: matte antique gold reads traditional, polished gold reads brighter in photographs. Our store consultants can help you compare weights and lengths in person.",
+  },
+  {
+    q: "Can temple jewellery be worn beyond festive occasions?",
+    a: "Yes. Lighter temple jewellery designs — a single Lakshmi pendant, slim carved bangles, or small jhumkas — work beautifully with cotton and linen saris, kurtas, and even contemporary outfits for everyday and workwear.",
+  },
+  {
+    q: "Where can I find Indriya jewellery near me?",
+    a: "Use the store locator to find your nearest Indriya boutique, check its timings, and arrange an appointment before you visit.",
+  },
+];
+
+function VaralakshmiPage() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+      >
+        Skip to content
+      </a>
+
+      {/* Header */}
+      <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
+          <a
+            href="/"
+            className="font-display text-2xl tracking-[0.32em] text-primary uppercase"
+            aria-label="Indriya home"
+          >
+            Indriya
+          </a>
+          <nav aria-label="Primary" className="hidden lg:block">
+            <ul className="flex items-center gap-8">
+              {navLinks.map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    className="text-sm text-muted-foreground underline-offset-8 transition-colors hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:underline"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <Button
+            asChild
+            variant="outline"
+            className="border-accent/60 bg-transparent text-primary hover:bg-secondary"
+          >
+            <a href="/store-locator">Find a Store</a>
+          </Button>
+        </div>
+        <nav aria-label="Primary mobile" className="lg:hidden">
+          <ul className="flex gap-6 overflow-x-auto border-t border-border/60 px-5 py-3">
+            {navLinks.map((l) => (
+              <li key={l.label} className="shrink-0">
+                <a
+                  href={l.href}
+                  className="text-xs uppercase tracking-[0.14em] text-muted-foreground hover:text-primary"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+
+      <main id="main">
+        {/* Hero */}
+        <section className="relative isolate overflow-hidden bg-maroon-deep">
+          <img
+            src={heroImg}
+            alt="Woman wearing Varalakshmi Vratham gold jewellery with an antique Lakshmi necklace"
+            width={1408}
+            height={1760}
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover object-[60%_center] opacity-80"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.25_0.075_20/0.94),oklch(0.25_0.075_20/0.62)_55%,oklch(0.25_0.075_20/0.25))]"
+          />
+          <div className="relative mx-auto flex min-h-[86svh] max-w-6xl flex-col justify-end px-5 pb-14 pt-28 lg:min-h-[78vh] lg:px-8 lg:pb-20">
+            <p className="eyebrow text-gold-soft">Varalakshmi Vratham 2026</p>
+            <h1 className="mt-4 max-w-xl text-[2.6rem] leading-[1.06] text-ivory sm:text-5xl lg:text-6xl">
+              Varalakshmi Vratham Gold Jewellery
+            </h1>
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-ivory/85 lg:text-lg">
+              Celebrate the sacred season with temple-inspired gold jewellery
+              that honours devotion, heritage, and the Lakshmi in your life.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button
+                asChild
+                size="lg"
+                className="bg-gold text-maroon-deep hover:bg-gold-soft"
+              >
+                <a href="#collection">Explore the Collection</a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-ivory/50 bg-transparent text-ivory hover:bg-ivory/10 hover:text-ivory"
+              >
+                <a href="/store-locator">Find a Store Near You</a>
+              </Button>
+            </div>
+            <a
+              href="/temple-jewellery"
+              className="mt-6 inline-block w-fit border-b border-gold-soft/60 pb-0.5 text-sm text-gold-soft transition-colors hover:text-ivory"
+            >
+              View Temple Jewellery Designs
+            </a>
+          </div>
+        </section>
+
+        {/* Intro copy */}
+        <section className="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-24">
+          <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
+          <p className="mt-10 text-lg leading-relaxed text-foreground lg:text-xl">
+            In many South Indian homes, the search for Varalakshmi Vratham gold
+            jewellery begins long before the kalasham is dressed. A necklace is
+            taken out of its pouch, a bangle is tried against a new silk saree,
+            and a daughter is told which piece was worn by her grandmother on the
+            same morning. Gold becomes part of the ritual itself — quiet,
+            deliberate, and full of memory.
+          </p>
+          <p className="mt-6 leading-relaxed text-muted-foreground">
+            Gold has long been chosen for sacred celebrations because it carries
+            more than beauty. It is an expression of faith, a symbol of
+            prosperity welcomed into the home, and a record of a family's
+            artistry and taste. Temple jewellery, in particular, draws its
+            vocabulary from sculpture and shrine architecture — deities framed by
+            arches, lotus petals opening around a stone, borders beaded like a
+            gopuram edge. Worn on Vratham day, these pieces feel less like
+            accessories and more like offerings.
+          </p>
+          <p className="mt-6 leading-relaxed text-muted-foreground">
+            At Indriya, our festive edit is built around that intent. There are
+            pieces designed to be the single statement of the morning, and lighter
+            designs meant to be layered with what you already own. Some are made
+            for a first purchase after a wedding; others are chosen with a
+            daughter in mind, years ahead of the occasion she will wear them for.
+            Whichever you choose, the aim is the same — jewellery that holds its
+            grace through the aarti, the visits, and every year it is brought out
+            again.
+          </p>
+        </section>
+
+        {/* Collection */}
+        <section
+          id="collection"
+          className="bg-secondary/60 py-16 lg:py-24"
+          aria-labelledby="collection-heading"
+        >
+          <div className="mx-auto max-w-6xl px-5 lg:px-8">
+            <p className="eyebrow">The Festive Edit</p>
+            <h2
+              id="collection-heading"
+              className="mt-3 max-w-xl text-3xl text-primary lg:text-4xl"
+            >
+              Jewellery for Every Sacred Celebration
+            </h2>
+            <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:gap-10">
+              {categories.map((c) => (
+                <article
+                  key={c.title}
+                  className="group flex flex-col overflow-hidden border border-border bg-card shadow-[var(--shadow-editorial)]"
+                >
+                  <img
+                    src={c.image}
+                    alt={c.alt}
+                    width={900}
+                    height={1100}
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(min-width: 1024px) 560px, (min-width: 640px) 50vw, 100vw"
+                    className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                  <div className="flex flex-1 flex-col p-6 lg:p-8">
+                    <h3 className="text-2xl text-primary">{c.title}</h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                      {c.copy}
+                    </p>
+                    <a
+                      href={c.href}
+                      className="mt-6 w-fit border-b border-accent pb-1 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:border-primary"
+                    >
+                      {c.cta}
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Craftsmanship */}
+        <section
+          className="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-24"
+          aria-labelledby="craft-heading"
+        >
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <img
+              src={craftImg}
+              alt="Macro view of temple jewellery designs showing lotus and peacock motifs in antique gold"
+              width={1200}
+              height={1400}
+              loading="lazy"
+              decoding="async"
+              sizes="(min-width: 1024px) 560px, 100vw"
+              className="aspect-[6/7] w-full object-cover"
+            />
+            <div>
+              <p className="eyebrow">Craftsmanship</p>
+              <h2
+                id="craft-heading"
+                className="mt-3 text-3xl text-primary lg:text-4xl"
+              >
+                Heritage in Every Detail
+              </h2>
+              <p className="mt-6 leading-relaxed text-muted-foreground">
+                Our temple jewellery designs borrow from the grammar of South
+                Indian shrines. A seated Lakshmi is framed by an arch; lotus
+                petals fan outward in layers; a peacock turns its neck along the
+                curve of a pendant. Kasu-inspired discs are strung so they move
+                and catch light as you do, and antique finishes are worked to look
+                gently lived-in rather than newly polished.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                In necklace temple jewellery especially, the detail sits close to
+                the eye — beaded rims, granulated texture, and nakkashi-style
+                surface work as a design inspiration behind the ornamentation. The
+                result is jewellery meant to be looked at slowly, and worn for
+                decades.
+              </p>
+              <a
+                href="/temple-jewellery"
+                className="mt-8 inline-block border-b border-accent pb-1 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:border-primary"
+              >
+                Explore Temple Jewellery
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Trust */}
+        <section
+          className="border-y border-border bg-card py-16 lg:py-20"
+          aria-labelledby="trust-heading"
+        >
+          <div className="mx-auto max-w-6xl px-5 lg:px-8">
+            <h2
+              id="trust-heading"
+              className="text-center text-3xl text-primary lg:text-4xl"
+            >
+              Crafted for a Legacy of Trust
+            </h2>
+            <div className="mt-12 grid gap-10 sm:grid-cols-3">
+              {trustCards.map((t) => (
+                <div key={t.title} className="text-center">
+                  <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-accent/50 bg-secondary">
+                    <t.icon
+                      aria-hidden="true"
+                      className="h-6 w-6 text-accent"
+                      strokeWidth={1.4}
+                    />
+                  </span>
+                  <h3 className="mt-5 text-xl text-primary">{t.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {t.copy}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
+              Editable placeholder: these three assurances are to be reviewed and
+              confirmed by the Indriya brand team against live policy before
+              publishing.
+            </p>
+          </div>
+        </section>
+
+        {/* Store CTA */}
+        <section className="relative isolate overflow-hidden">
+          <img
+            src={storeImg}
+            alt="Jewellery consultant showing antique gold necklaces to a customer in an Indriya boutique"
+            width={1600}
+            height={1000}
+            loading="lazy"
+            decoding="async"
+            sizes="100vw"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-[linear-gradient(to_right,oklch(0.25_0.075_20/0.92),oklch(0.25_0.075_20/0.55))]"
+          />
+          <div className="relative mx-auto max-w-6xl px-5 py-20 lg:px-8 lg:py-28">
+            <div className="max-w-lg">
+              <h2 className="text-3xl text-ivory lg:text-4xl">
+                Find Your Varalakshmi Vratham Jewellery
+              </h2>
+              <p className="mt-4 leading-relaxed text-ivory/85">
+                Discover the details, craftsmanship, and fit of your chosen
+                pieces in person.
+              </p>
+              <Button
+                asChild
+                size="lg"
+                className="mt-8 bg-gold text-maroon-deep hover:bg-gold-soft"
+              >
+                <a href="/store-locator">Find a Store Near You</a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Explore more */}
+        <section
+          className="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20"
+          aria-labelledby="explore-heading"
+        >
+          <h2 id="explore-heading" className="text-3xl text-primary lg:text-4xl">
+            Explore More
+          </h2>
+          <ul className="mt-8 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
+            {exploreLinks.map((l) => (
+              <li key={l.label} className="bg-card">
+                <a
+                  href={l.href}
+                  className="flex items-center justify-between px-6 py-5 text-sm text-primary transition-colors hover:bg-secondary"
+                >
+                  {l.label}
+                  <span aria-hidden="true" className="text-accent">
+                    &rarr;
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* FAQ */}
+        <section
+          className="bg-secondary/60 py-16 lg:py-24"
+          aria-labelledby="faq-heading"
+        >
+          <div className="mx-auto max-w-3xl px-5 lg:px-8">
+            <p className="eyebrow">Questions</p>
+            <h2
+              id="faq-heading"
+              className="mt-3 text-3xl text-primary lg:text-4xl"
+            >
+              Varalakshmi Vratham Jewellery FAQs
+            </h2>
+            <Accordion type="single" collapsible className="mt-8">
+              {faqs.map((f, i) => (
+                <AccordionItem key={f.q} value={`faq-${i}`}>
+                  <AccordionTrigger className="text-left font-display text-lg text-primary hover:no-underline">
+                    {f.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                    {f.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-maroon-deep text-ivory">
+        <div className="mx-auto max-w-6xl px-5 py-14 lg:px-8">
+          <p className="font-display text-2xl uppercase tracking-[0.32em]">
+            Indriya
+          </p>
+          <nav aria-label="Footer" className="mt-8">
+            <ul className="grid gap-4 text-sm sm:grid-cols-3 lg:grid-cols-4">
+              {[
+                { label: "Jewellery", href: "/jewellery" },
+                { label: "Gold", href: "/gold" },
+                { label: "Temple Jewellery", href: "/temple-jewellery" },
+                { label: "Weddings", href: "/weddings" },
+                { label: "Store Locator", href: "/store-locator" },
+                { label: "Contact", href: "/contact" },
+                { label: "Policies", href: "/policies" },
+              ].map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    className="text-ivory/80 underline-offset-4 transition-colors hover:text-ivory hover:underline"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <p className="mt-10 text-xs text-ivory/60">
+            &copy; {new Date().getFullYear()} Indriya. Imagery is
+            representational; product availability varies by store.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
