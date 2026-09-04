@@ -93,7 +93,6 @@
   --shadow-editorial: 0 18px 48px -28px oklch(0.25 0.075 20 / 0.35);
 }
 
-
 @layer base {
   * {
     border-color: var(--color-border);
@@ -102,5 +101,35 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.005em;
   }
 }
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+@utility rule-gold {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--gold-soft),
+    transparent
+  );
+}
+
