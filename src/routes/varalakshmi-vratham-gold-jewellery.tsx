@@ -87,7 +87,7 @@ const categories = [
     alt: "Antique gold necklace with a Lakshmi motif pendant resting on ivory silk",
     copy: "An antique gold necklace centred on the goddess, finished with kasu-inspired discs and a softly aged lustre made for pooja mornings.",
     cta: "View Necklaces",
-    href: "/gold-necklaces",
+    href: "https://www.indriya.com/jewellery/neckwear",
   },
   {
     title: "Temple Jewellery Bangles",
@@ -95,7 +95,7 @@ const categories = [
     alt: "Close-up of temple jewellery bangles with intricate Lakshmi-inspired detailing",
     copy: "Temple jewellery bangles carved with deities and beaded borders, designed to stack quietly or stand alone against silk.",
     cta: "View Bangles",
-    href: "/gold-bangles",
+    href: "https://www.indriya.com/jewellery/bangles",
   },
   {
     title: "Antique Bridal Earrings",
@@ -103,7 +103,7 @@ const categories = [
     alt: "Antique bridal earrings styled with a South Indian silk saree",
     copy: "Antique bridal earrings in jhumka and chandbali silhouettes, weighted for comfort through long ceremonies.",
     cta: "View Earrings",
-    href: "/gold-earrings",
+    href: "https://www.indriya.com/jewellery/earrings",
   },
   {
     title: "South Indian Bridal Jewellery Sets",
@@ -317,9 +317,10 @@ function VaralakshmiPage() {
             </h2>
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:gap-10">
               {categories.map((c) => (
-                <article
+                <a
                   key={c.title}
-                  className="group flex flex-col overflow-hidden border border-border bg-card shadow-[var(--shadow-editorial)]"
+                  href={c.href}
+                  className="group flex flex-col overflow-hidden border border-border bg-card shadow-[var(--shadow-editorial)] transition-colors hover:bg-card/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <img
                     src={c.image}
@@ -331,19 +332,16 @@ function VaralakshmiPage() {
                     sizes="(min-width: 1024px) 560px, (min-width: 640px) 50vw, 100vw"
                     className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
-                  <div className="flex flex-1 flex-col p-6 lg:p-8">
+                  <article className="flex flex-1 flex-col p-6 lg:p-8">
                     <h3 className="text-2xl text-primary">{c.title}</h3>
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                       {c.copy}
                     </p>
-                    <a
-                      href={c.href}
-                      className="mt-6 w-fit border-b border-accent pb-1 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:border-primary"
-                    >
+                    <span className="mt-6 w-fit border-b border-accent pb-1 text-xs uppercase tracking-[0.18em] text-primary transition-colors group-hover:border-primary">
                       {c.cta}
-                    </a>
-                  </div>
-                </article>
+                    </span>
+                  </article>
+                </a>
               ))}
             </div>
           </div>
