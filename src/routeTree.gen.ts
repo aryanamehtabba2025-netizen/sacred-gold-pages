@@ -10,33 +10,44 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as VaralakshmiVrathamGoldJewelleryRouteImport } from './routes/varalakshmi-vratham-gold-jewellery'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VaralakshmiVrathamGoldJewelleryRoute =
+  VaralakshmiVrathamGoldJewelleryRouteImport.update({
+    id: '/varalakshmi-vratham-gold-jewellery',
+    path: '/varalakshmi-vratham-gold-jewellery',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/varalakshmi-vratham-gold-jewellery': typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/varalakshmi-vratham-gold-jewellery': typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/varalakshmi-vratham-gold-jewellery': typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/varalakshmi-vratham-gold-jewellery'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/varalakshmi-vratham-gold-jewellery'
+  id: '__root__' | '/' | '/varalakshmi-vratham-gold-jewellery'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  VaralakshmiVrathamGoldJewelleryRoute: typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +59,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/varalakshmi-vratham-gold-jewellery': {
+      id: '/varalakshmi-vratham-gold-jewellery'
+      path: '/varalakshmi-vratham-gold-jewellery'
+      fullPath: '/varalakshmi-vratham-gold-jewellery'
+      preLoaderRoute: typeof VaralakshmiVrathamGoldJewelleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  VaralakshmiVrathamGoldJewelleryRoute: VaralakshmiVrathamGoldJewelleryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
