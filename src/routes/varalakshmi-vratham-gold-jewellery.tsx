@@ -87,7 +87,7 @@ const categories = [
     alt: "Antique gold necklace with a Lakshmi motif pendant resting on ivory silk",
     copy: "An antique gold necklace centred on the goddess, finished with kasu-inspired discs and a softly aged lustre made for pooja mornings.",
     cta: "View Necklaces",
-    href: "/gold-necklaces",
+    href: "https://www.indriya.com/jewellery/neckwear",
   },
   {
     title: "Temple Jewellery Bangles",
@@ -95,7 +95,7 @@ const categories = [
     alt: "Close-up of temple jewellery bangles with intricate Lakshmi-inspired detailing",
     copy: "Temple jewellery bangles carved with deities and beaded borders, designed to stack quietly or stand alone against silk.",
     cta: "View Bangles",
-    href: "/gold-bangles",
+    href: "https://www.indriya.com/jewellery/bangles",
   },
   {
     title: "Antique Bridal Earrings",
@@ -103,7 +103,7 @@ const categories = [
     alt: "Antique bridal earrings styled with a South Indian silk saree",
     copy: "Antique bridal earrings in jhumka and chandbali silhouettes, weighted for comfort through long ceremonies.",
     cta: "View Earrings",
-    href: "/gold-earrings",
+    href: "https://www.indriya.com/jewellery/earrings",
   },
   {
     title: "South Indian Bridal Jewellery Sets",
