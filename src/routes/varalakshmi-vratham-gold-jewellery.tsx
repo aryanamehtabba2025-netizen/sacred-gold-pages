@@ -14,6 +14,7 @@ import banglesImg from "@/assets/cat-temple-bangles.jpg";
 import earringsImg from "@/assets/cat-bridal-earrings.jpg";
 import bridalSetImg from "@/assets/cat-bridal-sets.jpg";
 import craftImg from "@/assets/craft-detail.jpg";
+import logoAsset from "@/assets/indriya-logo.png.asset.json";
 import storeImg from "@/assets/store-consultation.jpg";
 
 const CANONICAL =
@@ -73,11 +74,11 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
 });
 
 const navLinks = [
-  { label: "Jewellery", href: "/jewellery" },
-  { label: "Gold", href: "/gold" },
-  { label: "Temple Jewellery", href: "/temple-jewellery" },
-  { label: "Weddings", href: "/weddings" },
-  { label: "Stores", href: "/store-locator" },
+  { label: "Jewellery", href: "https://www.indriya.com/jewellery" },
+  { label: "Gold", href: "https://www.indriya.com/gold" },
+  { label: "Temple Jewellery", href: "https://www.indriya.com/temple-jewellery" },
+  { label: "Weddings", href: "https://www.indriya.com/wedding" },
+  { label: "Stores", href: "https://www.indriya.com/jewellery-stores" },
 ];
 
 const categories = [
@@ -111,7 +112,7 @@ const categories = [
     alt: "Bride in an ivory silk saree wearing a complete set of South Indian bridal jewellery in antique gold",
     copy: "Complete south indian bridal jewellery sets — layered haaram, choker, belt and earrings — composed as one considered story.",
     cta: "View Bridal Sets",
-    href: "/bridal-jewellery",
+    href: "https://www.indriya.com/wedding",
   },
 ];
 
@@ -134,10 +135,10 @@ const trustCards = [
 ];
 
 const exploreLinks = [
-  { label: "Temple Jewellery Collection", href: "/temple-jewellery" },
-  { label: "Gold Necklaces", href: "/gold-necklaces" },
-  { label: "Gold Bangles", href: "/gold-bangles" },
-  { label: "Store Locator", href: "/store-locator" },
+  { label: "Temple Jewellery Collection", href: "https://www.indriya.com/temple-jewellery" },
+  { label: "Gold Necklaces", href: "https://www.indriya.com/jewellery/neckwear" },
+  { label: "Gold Bangles", href: "https://www.indriya.com/jewellery/bangles" },
+  { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
 ];
 
 const faqs = [
@@ -172,12 +173,14 @@ function VaralakshmiPage() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
-          <a
-            href="/"
-            className="font-display text-2xl tracking-[0.32em] text-primary uppercase"
-            aria-label="Indriya home"
-          >
-            Indriya
+          <a href="/" aria-label="Indriya home" className="shrink-0">
+            <img
+              src={logoAsset.url}
+              alt="Indriya Aditya Birla Jewellery logo"
+              width={640}
+              height={360}
+              className="h-12 w-auto lg:h-14"
+            />
           </a>
           <nav aria-label="Primary" className="hidden lg:block">
             <ul className="flex items-center gap-8">
@@ -198,7 +201,7 @@ function VaralakshmiPage() {
             variant="outline"
             className="border-accent/60 bg-transparent text-primary hover:bg-secondary"
           >
-            <a href="/store-locator">Find a Store</a>
+            <a href="https://www.indriya.com/jewellery-stores">Find a Store</a>
           </Button>
         </div>
         <nav aria-label="Primary mobile" className="lg:hidden">
@@ -256,11 +259,11 @@ function VaralakshmiPage() {
                 variant="outline"
                 className="border-ivory/50 bg-transparent text-ivory hover:bg-ivory/10 hover:text-ivory"
               >
-                <a href="/store-locator">Find a Store Near You</a>
+                <a href="https://www.indriya.com/jewellery-stores">Find a Store Near You</a>
               </Button>
             </div>
             <a
-              href="/temple-jewellery"
+              href="https://www.indriya.com/temple-jewellery"
               className="mt-6 inline-block w-fit border-b border-gold-soft/60 pb-0.5 text-sm text-gold-soft transition-colors hover:text-ivory"
             >
               View Temple Jewellery Designs
@@ -387,7 +390,7 @@ function VaralakshmiPage() {
                 decades.
               </p>
               <a
-                href="/temple-jewellery"
+                href="https://www.indriya.com/temple-jewellery"
                 className="mt-8 inline-block border-b border-accent pb-1 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:border-primary"
               >
                 Explore Temple Jewellery
@@ -463,7 +466,7 @@ function VaralakshmiPage() {
                 size="lg"
                 className="mt-8 bg-gold text-maroon-deep hover:bg-gold-soft"
               >
-                <a href="/store-locator">Find a Store Near You</a>
+                <a href="https://www.indriya.com/jewellery-stores">Find a Store Near You</a>
               </Button>
             </div>
           </div>
@@ -526,19 +529,24 @@ function VaralakshmiPage() {
       {/* Footer */}
       <footer className="bg-maroon-deep text-ivory">
         <div className="mx-auto max-w-6xl px-5 py-14 lg:px-8">
-          <p className="font-display text-2xl uppercase tracking-[0.32em]">
-            Indriya
-          </p>
+          <img
+            src={logoAsset.url}
+            alt="Indriya Aditya Birla Jewellery logo"
+            width={640}
+            height={360}
+            loading="lazy"
+            className="h-14 w-auto brightness-0 invert"
+          />
           <nav aria-label="Footer" className="mt-8">
             <ul className="grid gap-4 text-sm sm:grid-cols-3 lg:grid-cols-4">
               {[
-                { label: "Jewellery", href: "/jewellery" },
-                { label: "Gold", href: "/gold" },
-                { label: "Temple Jewellery", href: "/temple-jewellery" },
-                { label: "Weddings", href: "/weddings" },
-                { label: "Store Locator", href: "/store-locator" },
+                { label: "Jewellery", href: "https://www.indriya.com/jewellery" },
+                { label: "Gold", href: "https://www.indriya.com/gold" },
+                { label: "Temple Jewellery", href: "https://www.indriya.com/temple-jewellery" },
+                { label: "Weddings", href: "https://www.indriya.com/wedding" },
+                { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
                 { label: "Contact", href: "/contact" },
-                { label: "Policies", href: "/policies" },
+                { label: "Policies", href: "https://www.indriya.com/terms-and-conditions" },
               ].map((l) => (
                 <li key={l.label}>
                   <a
