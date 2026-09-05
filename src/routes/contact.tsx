@@ -53,8 +53,8 @@ function ContactPage() {
             <img
               src={logoAsset.url}
               alt="Indriya Aditya Birla Jewellery logo"
-              width={640}
-              height={360}
+              width={841}
+              height={650}
               className="h-12 w-auto lg:h-14"
             />
           </a>
