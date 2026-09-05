@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as VaralakshmiVrathamGoldJewelleryRouteImport } from './routes/varalakshmi-vratham-gold-jewellery'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const VaralakshmiVrathamGoldJewelleryRoute =
@@ -26,27 +32,31 @@ const VaralakshmiVrathamGoldJewelleryRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
   '/varalakshmi-vratham-gold-jewellery': typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
   '/varalakshmi-vratham-gold-jewellery': typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
   '/varalakshmi-vratham-gold-jewellery': typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/varalakshmi-vratham-gold-jewellery'
+  fullPaths: '/' | '/contact' | '/varalakshmi-vratham-gold-jewellery'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/varalakshmi-vratham-gold-jewellery'
-  id: '__root__' | '/' | '/varalakshmi-vratham-gold-jewellery'
+  to: '/' | '/contact' | '/varalakshmi-vratham-gold-jewellery'
+  id: '__root__' | '/' | '/contact' | '/varalakshmi-vratham-gold-jewellery'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
   VaralakshmiVrathamGoldJewelleryRoute: typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 
@@ -57,6 +67,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/varalakshmi-vratham-gold-jewellery': {
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
   VaralakshmiVrathamGoldJewelleryRoute: VaralakshmiVrathamGoldJewelleryRoute,
 }
 export const routeTree = rootRouteImport
