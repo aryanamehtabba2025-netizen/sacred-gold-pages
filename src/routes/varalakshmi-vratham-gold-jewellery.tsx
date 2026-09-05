@@ -177,8 +177,8 @@ function VaralakshmiPage() {
             <img
               src={logoAsset.url}
               alt="Indriya Aditya Birla Jewellery logo"
-              width={640}
-              height={360}
+              width={841}
+              height={650}
               className="h-12 w-auto lg:h-14"
             />
           </a>
@@ -532,10 +532,10 @@ function VaralakshmiPage() {
           <img
             src={logoAsset.url}
             alt="Indriya Aditya Birla Jewellery logo"
-            width={640}
-            height={360}
+            width={841}
+            height={650}
             loading="lazy"
-            className="h-14 w-auto brightness-0 invert"
+            className="h-16 w-auto brightness-0 invert"
           />
           <nav aria-label="Footer" className="mt-8">
             <ul className="grid gap-4 text-sm sm:grid-cols-3 lg:grid-cols-4">
