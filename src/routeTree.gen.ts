@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as TempleJewelleryGuideRouteImport } from './routes/temple-jewellery-guide'
 import { Route as VaralakshmiVrathamGoldJewelleryRouteImport } from './routes/varalakshmi-vratham-gold-jewellery'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TempleJewelleryGuideRoute = TempleJewelleryGuideRouteImport.update({
+  id: '/temple-jewellery-guide',
+  path: '/temple-jewellery-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VaralakshmiVrathamGoldJewelleryRoute =
   VaralakshmiVrathamGoldJewelleryRouteImport.update({
     id: '/varalakshmi-vratham-gold-jewellery',
@@ -33,30 +39,47 @@ const VaralakshmiVrathamGoldJewelleryRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/temple-jewellery-guide': typeof TempleJewelleryGuideRoute
   '/varalakshmi-vratham-gold-jewellery': typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/temple-jewellery-guide': typeof TempleJewelleryGuideRoute
   '/varalakshmi-vratham-gold-jewellery': typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/temple-jewellery-guide': typeof TempleJewelleryGuideRoute
   '/varalakshmi-vratham-gold-jewellery': typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/varalakshmi-vratham-gold-jewellery'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/temple-jewellery-guide'
+    | '/varalakshmi-vratham-gold-jewellery'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/varalakshmi-vratham-gold-jewellery'
-  id: '__root__' | '/' | '/contact' | '/varalakshmi-vratham-gold-jewellery'
+  to:
+    | '/'
+    | '/contact'
+    | '/temple-jewellery-guide'
+    | '/varalakshmi-vratham-gold-jewellery'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/temple-jewellery-guide'
+    | '/varalakshmi-vratham-gold-jewellery'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  TempleJewelleryGuideRoute: typeof TempleJewelleryGuideRoute
   VaralakshmiVrathamGoldJewelleryRoute: typeof VaralakshmiVrathamGoldJewelleryRoute
 }
 
@@ -76,6 +99,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/temple-jewellery-guide': {
+      id: '/temple-jewellery-guide'
+      path: '/temple-jewellery-guide'
+      fullPath: '/temple-jewellery-guide'
+      preLoaderRoute: typeof TempleJewelleryGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/varalakshmi-vratham-gold-jewellery': {
       id: '/varalakshmi-vratham-gold-jewellery'
       path: '/varalakshmi-vratham-gold-jewellery'
@@ -89,6 +119,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  TempleJewelleryGuideRoute: TempleJewelleryGuideRoute,
   VaralakshmiVrathamGoldJewelleryRoute: VaralakshmiVrathamGoldJewelleryRoute,
 }
 export const routeTree = rootRouteImport
