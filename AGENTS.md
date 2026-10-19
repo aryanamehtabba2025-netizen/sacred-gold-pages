@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Content architecture
+- Keep the assignment's temple-jewellery FAQs in one browser-safe data module, used by the landing page and its FAQPage JSON-LD, so visible answers and structured data remain identical.
+- The educational guide is a separate crawlable TanStack content route with leaf metadata and internal links; reuse existing design tokens and imagery to preserve the site's visual identity.
