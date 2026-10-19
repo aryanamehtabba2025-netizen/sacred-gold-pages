@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck, Gem, Repeat } from "lucide-react";
+import { templeJewelleryFaqs } from "@/lib/temple-jewellery-faqs";
 
 import heroImg from "@/assets/hero-varalakshmi.jpg";
 import necklaceImg from "@/assets/cat-lakshmi-necklace.jpg";
@@ -67,6 +68,18 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
       {
         type: "application/ld+json",
         children: JSON.stringify(breadcrumbSchema),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: templeJewelleryFaqs.map(({ q, a }) => ({
+            "@type": "Question",
+            name: q,
+            acceptedAnswer: { "@type": "Answer", text: a },
+          })),
+        }),
       },
     ],
   }),
@@ -499,6 +512,7 @@ function VaralakshmiPage() {
 
         {/* FAQ */}
         <section
+          id="temple-jewellery-faqs"
           className="bg-secondary/60 py-16 lg:py-24"
           aria-labelledby="faq-heading"
         >
@@ -508,8 +522,20 @@ function VaralakshmiPage() {
               id="faq-heading"
               className="mt-3 text-3xl text-primary lg:text-4xl"
             >
-              Varalakshmi Vratham Jewellery FAQs
+              Temple Jewellery FAQs
             </h2>
+            <div className="mt-8 divide-y divide-border">
+              {templeJewelleryFaqs.map(({ q, a }) => (
+                <article key={q} className="py-6">
+                  <h3 className="text-xl text-primary">{q}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a}</p>
+                </article>
+              ))}
+            </div>
+            <Button asChild variant="outline" className="mt-8 border-accent/60 bg-transparent text-primary hover:bg-secondary">
+              <Link to="/temple-jewellery-guide">Read the Temple Jewellery Guide</Link>
+            </Button>
+            <h3 className="mt-12 text-2xl text-primary">Varalakshmi Vratham Jewellery FAQs</h3>
             <Accordion type="single" collapsible className="mt-8">
               {faqs.map((f, i) => (
                 <AccordionItem key={f.q} value={`faq-${i}`}>
@@ -561,7 +587,7 @@ function VaralakshmiPage() {
           </nav>
           <p className="mt-10 text-xs text-ivory/60">
             &copy; {new Date().getFullYear()} Indriya. Imagery is
-            representational; product availability varies by store.
+            representational. Student assignment demo; no product availability or guarantees are asserted.
           </p>
         </div>
       </footer>
