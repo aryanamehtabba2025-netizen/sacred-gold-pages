@@ -18,8 +18,7 @@ import craftImg from "@/assets/craft-detail.jpg";
 import logoAsset from "@/assets/indriya-logo.png.asset.json";
 import storeImg from "@/assets/store-consultation.jpg";
 
-const CANONICAL =
-  "https://www.indriya.com/varalakshmi-vratham-gold-jewellery";
+const CANONICAL = "https://www.indriya.com/varalakshmi-vratham-gold-jewellery";
 const TITLE = "Varalakshmi Vratham Gold Jewellery | Indriya";
 const DESCRIPTION =
   "Discover Varalakshmi Vratham gold jewellery by Indriya, from Lakshmi necklaces and temple bangles to antique earrings for sacred celebrations.";
@@ -255,15 +254,11 @@ function VaralakshmiPage() {
               Varalakshmi Vratham Gold Jewellery
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-ivory/85 lg:text-lg">
-              Celebrate the sacred season with temple-inspired gold jewellery
-              that honours devotion, heritage, and the Lakshmi in your life.
+              Celebrate the sacred season with temple-inspired gold jewellery that honours devotion,
+              heritage, and the Lakshmi in your life.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button
-                asChild
-                size="lg"
-                className="bg-gold text-maroon-deep hover:bg-gold-soft"
-              >
+              <Button asChild size="lg" className="bg-gold text-maroon-deep hover:bg-gold-soft">
                 <a href="#collection">Explore the Collection</a>
               </Button>
               <Button
@@ -288,32 +283,27 @@ function VaralakshmiPage() {
         <section className="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-24">
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
           <p className="mt-10 text-lg leading-relaxed text-foreground lg:text-xl">
-            In many South Indian homes, the search for Varalakshmi Vratham gold
-            jewellery begins long before the kalasham is dressed. A necklace is
-            taken out of its pouch, a bangle is tried against a new silk saree,
-            and a daughter is told which piece was worn by her grandmother on the
-            same morning. Gold becomes part of the ritual itself — quiet,
+            In many South Indian homes, the search for Varalakshmi Vratham gold jewellery begins
+            long before the kalasham is dressed. A necklace is taken out of its pouch, a bangle is
+            tried against a new silk saree, and a daughter is told which piece was worn by her
+            grandmother on the same morning. Gold becomes part of the ritual itself — quiet,
             deliberate, and full of memory.
           </p>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            Gold has long been chosen for sacred celebrations because it carries
-            more than beauty. It is an expression of faith, a symbol of
-            prosperity welcomed into the home, and a record of a family's
-            artistry and taste. Temple jewellery, in particular, draws its
-            vocabulary from sculpture and shrine architecture — deities framed by
-            arches, lotus petals opening around a stone, borders beaded like a
-            gopuram edge. Worn on Vratham day, these pieces feel less like
-            accessories and more like offerings.
+            Gold has long been chosen for sacred celebrations because it carries more than beauty.
+            It is an expression of faith, a symbol of prosperity welcomed into the home, and a
+            record of a family's artistry and taste. Temple jewellery, in particular, draws its
+            vocabulary from sculpture and shrine architecture — deities framed by arches, lotus
+            petals opening around a stone, borders beaded like a gopuram edge. Worn on Vratham day,
+            these pieces feel less like accessories and more like offerings.
           </p>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            At Indriya, our festive edit is built around that intent. There are
-            pieces designed to be the single statement of the morning, and lighter
-            designs meant to be layered with what you already own. Some are made
-            for a first purchase after a wedding; others are chosen with a
-            daughter in mind, years ahead of the occasion she will wear them for.
-            Whichever you choose, the aim is the same — jewellery that holds its
-            grace through the aarti, the visits, and every year it is brought out
-            again.
+            At Indriya, our festive edit is built around that intent. There are pieces designed to
+            be the single statement of the morning, and lighter designs meant to be layered with
+            what you already own. Some are made for a first purchase after a wedding; others are
+            chosen with a daughter in mind, years ahead of the occasion she will wear them for.
+            Whichever you choose, the aim is the same — jewellery that holds its grace through the
+            aarti, the visits, and every year it is brought out again.
           </p>
         </section>
 
@@ -325,10 +315,7 @@ function VaralakshmiPage() {
         >
           <div className="mx-auto max-w-6xl px-5 lg:px-8">
             <p className="eyebrow">The Festive Edit</p>
-            <h2
-              id="collection-heading"
-              className="mt-3 max-w-xl text-3xl text-primary lg:text-4xl"
-            >
+            <h2 id="collection-heading" className="mt-3 max-w-xl text-3xl text-primary lg:text-4xl">
               Jewellery for Every Sacred Celebration
             </h2>
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:gap-10">
@@ -381,26 +368,21 @@ function VaralakshmiPage() {
             />
             <div>
               <p className="eyebrow">Craftsmanship</p>
-              <h2
-                id="craft-heading"
-                className="mt-3 text-3xl text-primary lg:text-4xl"
-              >
+              <h2 id="craft-heading" className="mt-3 text-3xl text-primary lg:text-4xl">
                 Heritage in Every Detail
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Our temple jewellery designs borrow from the grammar of South
-                Indian shrines. A seated Lakshmi is framed by an arch; lotus
-                petals fan outward in layers; a peacock turns its neck along the
-                curve of a pendant. Kasu-inspired discs are strung so they move
-                and catch light as you do, and antique finishes are worked to look
-                gently lived-in rather than newly polished.
+                Our temple jewellery designs borrow from the grammar of South Indian shrines. A
+                seated Lakshmi is framed by an arch; lotus petals fan outward in layers; a peacock
+                turns its neck along the curve of a pendant. Kasu-inspired discs are strung so they
+                move and catch light as you do, and antique finishes are worked to look gently
+                lived-in rather than newly polished.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                In necklace temple jewellery especially, the detail sits close to
-                the eye — beaded rims, granulated texture, and nakkashi-style
-                surface work as a design inspiration behind the ornamentation. The
-                result is jewellery meant to be looked at slowly, and worn for
-                decades.
+                In necklace temple jewellery especially, the detail sits close to the eye — beaded
+                rims, granulated texture, and nakkashi-style surface work as a design inspiration
+                behind the ornamentation. The result is jewellery meant to be looked at slowly, and
+                worn for decades.
               </p>
               <a
                 href="https://www.indriya.com/temple-jewellery"
@@ -418,33 +400,23 @@ function VaralakshmiPage() {
           aria-labelledby="trust-heading"
         >
           <div className="mx-auto max-w-6xl px-5 lg:px-8">
-            <h2
-              id="trust-heading"
-              className="text-center text-3xl text-primary lg:text-4xl"
-            >
+            <h2 id="trust-heading" className="text-center text-3xl text-primary lg:text-4xl">
               Crafted for a Legacy of Trust
             </h2>
             <div className="mt-12 grid gap-10 sm:grid-cols-3">
               {trustCards.map((t) => (
                 <div key={t.title} className="text-center">
                   <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-accent/50 bg-secondary">
-                    <t.icon
-                      aria-hidden="true"
-                      className="h-6 w-6 text-accent"
-                      strokeWidth={1.4}
-                    />
+                    <t.icon aria-hidden="true" className="h-6 w-6 text-accent" strokeWidth={1.4} />
                   </span>
                   <h3 className="mt-5 text-xl text-primary">{t.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {t.copy}
-                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t.copy}</p>
                 </div>
               ))}
             </div>
             <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
-              Editable placeholder: these three assurances are to be reviewed and
-              confirmed by the Indriya brand team against live policy before
-              publishing.
+              Editable placeholder: these three assurances are to be reviewed and confirmed by the
+              Indriya brand team against live policy before publishing.
             </p>
           </div>
         </section>
@@ -471,8 +443,7 @@ function VaralakshmiPage() {
                 Find Your Varalakshmi Vratham Jewellery
               </h2>
               <p className="mt-4 leading-relaxed text-ivory/85">
-                Discover the details, craftsmanship, and fit of your chosen
-                pieces in person.
+                Discover the details, craftsmanship, and fit of your chosen pieces in person.
               </p>
               <Button
                 asChild
@@ -518,10 +489,7 @@ function VaralakshmiPage() {
         >
           <div className="mx-auto max-w-3xl px-5 lg:px-8">
             <p className="eyebrow">Questions</p>
-            <h2
-              id="faq-heading"
-              className="mt-3 text-3xl text-primary lg:text-4xl"
-            >
+            <h2 id="faq-heading" className="mt-3 text-3xl text-primary lg:text-4xl">
               Temple Jewellery FAQs
             </h2>
             <div className="mt-8 divide-y divide-border">
@@ -532,7 +500,11 @@ function VaralakshmiPage() {
                 </article>
               ))}
             </div>
-            <Button asChild variant="outline" className="mt-8 border-accent/60 bg-transparent text-primary hover:bg-secondary">
+            <Button
+              asChild
+              variant="outline"
+              className="mt-8 border-accent/60 bg-transparent text-primary hover:bg-secondary"
+            >
               <Link to="/temple-jewellery-guide">Read the Temple Jewellery Guide</Link>
             </Button>
             <h3 className="mt-12 text-2xl text-primary">Varalakshmi Vratham Jewellery FAQs</h3>
@@ -586,8 +558,8 @@ function VaralakshmiPage() {
             </ul>
           </nav>
           <p className="mt-10 text-xs text-ivory/60">
-            &copy; {new Date().getFullYear()} Indriya. Imagery is
-            representational. Student assignment demo; no product availability or guarantees are asserted.
+            &copy; {new Date().getFullYear()} Indriya. Imagery is representational. Student
+            assignment demo; no product availability or guarantees are asserted.
           </p>
         </div>
       </footer>
