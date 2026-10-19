@@ -82,15 +82,10 @@ function ContactPage() {
           .
         </p>
         <p className="mt-4 leading-relaxed text-muted-foreground">
-          Our team is happy to help you with temple jewellery designs, antique
-          gold necklaces, bangles, earrings and bridal sets, or to arrange a
-          boutique appointment.
+          Our team is happy to help you with temple jewellery designs, antique gold necklaces,
+          bangles, earrings and bridal sets, or to arrange a boutique appointment.
         </p>
-        <Button
-          asChild
-          size="lg"
-          className="mt-10 bg-gold text-maroon-deep hover:bg-gold-soft"
-        >
+        <Button asChild size="lg" className="mt-10 bg-gold text-maroon-deep hover:bg-gold-soft">
           <a href="tel:+919920792272">Call 9920792272</a>
         </Button>
       </main>
@@ -111,9 +106,7 @@ function ContactPage() {
               ))}
             </ul>
           </nav>
-          <p className="mt-10 text-xs text-ivory/60">
-            &copy; {new Date().getFullYear()} Indriya.
-          </p>
+          <p className="mt-10 text-xs text-ivory/60">&copy; {new Date().getFullYear()} Indriya.</p>
         </div>
       </footer>
     </div>
