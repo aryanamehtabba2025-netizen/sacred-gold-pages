@@ -8,4 +8,4 @@
 
 - [x] Add the five requested bridal FAQs without changing the existing page content.
 - [x] Keep the FAQPage schema matched exactly to the visible bridal FAQ answers.
-- [ ] Verify the rendered FAQ, schema, and project checks; do not publish.
+- [x] Verify the rendered FAQ, schema, and project checks; do not publish.
