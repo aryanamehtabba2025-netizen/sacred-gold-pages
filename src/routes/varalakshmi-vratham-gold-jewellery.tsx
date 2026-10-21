@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck, Gem, Repeat } from "lucide-react";
+import { bridalJewelleryFaqs } from "@/lib/bridal-jewellery-faqs";
 import { templeJewelleryFaqs } from "@/lib/temple-jewellery-faqs";
 
 import heroImg from "@/assets/hero-varalakshmi.jpg";
@@ -73,7 +74,7 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: templeJewelleryFaqs.map(({ q, a }) => ({
+          mainEntity: bridalJewelleryFaqs.map(({ q, a }) => ({
             "@type": "Question",
             name: q,
             acceptedAnswer: { "@type": "Answer", text: a },
@@ -482,6 +483,27 @@ function VaralakshmiPage() {
         </section>
 
         {/* FAQ */}
+        <section
+          id="bridal-jewellery-faqs"
+          className="border-y border-border bg-card py-16 lg:py-24"
+          aria-labelledby="bridal-faq-heading"
+        >
+          <div className="mx-auto max-w-3xl px-5 lg:px-8">
+            <p className="eyebrow">Questions</p>
+            <h2 id="bridal-faq-heading" className="mt-3 text-3xl text-primary lg:text-4xl">
+              Bridal Jewellery FAQs
+            </h2>
+            <div className="mt-8 divide-y divide-border">
+              {bridalJewelleryFaqs.map(({ q, a }) => (
+                <article key={q} className="py-6">
+                  <h3 className="text-xl text-primary">{q}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section
           id="temple-jewellery-faqs"
           className="bg-secondary/60 py-16 lg:py-24"
