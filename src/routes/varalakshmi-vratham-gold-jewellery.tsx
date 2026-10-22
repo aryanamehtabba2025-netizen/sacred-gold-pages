@@ -41,12 +41,27 @@ const breadcrumbSchema = {
       item: "https://www.indriya.com/temple-jewellery",
     },
     {
-      "@type": "ListItem",
-      position: 3,
+          "@type": "ListItem",
+          position: 3,
       name: "Varalakshmi Vratham Gold Jewellery",
       item: CANONICAL,
     },
   ],
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: TITLE,
+  description: DESCRIPTION,
+  url: CANONICAL,
+  author: { "@type": "Person", name: "Aryan Mehta" },
+  publisher: {
+    "@type": "Person",
+    name: "Aryan Mehta",
+    description: "Student concept project; not an official Indriya store",
+  },
+  dateModified: "2026-10-22",
 };
 
 export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
@@ -80,6 +95,10 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
             acceptedAnswer: { "@type": "Answer", text: a },
           })),
         }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(webPageSchema),
       },
     ],
   }),
@@ -283,7 +302,20 @@ function VaralakshmiPage() {
         {/* Intro copy */}
         <section className="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-24">
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
-          <p className="mt-10 text-lg leading-relaxed text-foreground lg:text-xl">
+          <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
+            By <span className="text-primary">Aryan Mehta</span>{" "}
+            <span aria-hidden="true">·</span> Last updated{" "}
+            <time dateTime="2026-10-22">22 October 2026</time>{" "}
+            <span aria-hidden="true">·</span> Student concept page{" "}
+            <span aria-hidden="true">·</span>{" "}
+            <Link
+              to="/about"
+              className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
+            >
+              About this page
+            </Link>
+          </p>
+          <p className="mt-6 text-lg leading-relaxed text-foreground lg:text-xl">
             In many South Indian homes, the search for Varalakshmi Vratham gold jewellery begins
             long before the kalasham is dressed. A necklace is taken out of its pouch, a bangle is
             tried against a new silk saree, and a daughter is told which piece was worn by her
