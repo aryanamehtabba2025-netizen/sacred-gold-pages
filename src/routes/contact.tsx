@@ -75,8 +75,13 @@ function ContactPage() {
           store or customer-service channel.
         </p>
         <p className="mt-4 leading-relaxed text-muted-foreground">
-          To ask a question about the project, open an issue in its public GitHub repository. Do not
-          include private or payment information in a public issue.
+          For questions or corrections about this student project, email{" "}
+          <a className="underline underline-offset-4" href="mailto:7aryanmehta@gmail.com">
+            7aryanmehta@gmail.com
+          </a>
+          . Aryan is the student author, not a jewellery professional or Indriya representative. You
+          can also open an issue in the public GitHub repository, but do not include private or
+          payment information in a public issue.
         </p>
         <Button asChild size="lg" className="mt-10 bg-gold text-maroon-deep hover:bg-gold-soft">
           <a href="https://github.com/aryanamehtabba2025-netizen/sacred-gold-pages/issues">
