@@ -39,6 +39,7 @@ export const Route = createFileRoute("/about")({
             name: "Aryan Mehta",
             description: "Student concept project; not an official Indriya store",
           },
+          datePublished: "2026-10-21",
           dateModified: "2026-10-26",
         }),
       },
@@ -106,6 +107,12 @@ function AboutPage() {
           certify jewellery.
         </p>
         <p className="mt-6 leading-relaxed text-muted-foreground">
+          Aryan is the student author and page editor, not an Indriya representative, jeweller or
+          gemmologist. His first-party work on this project was selecting the questions, comparing
+          published sources and writing the educational summaries; it was not a hands-on inspection
+          of the pictured jewellery.
+        </p>
+        <p className="mt-6 leading-relaxed text-muted-foreground">
           For questions about this educational project, see the{" "}
           <Link to="/contact" className="border-b border-accent pb-0.5 text-primary">
             contact page
@@ -113,19 +120,41 @@ function AboutPage() {
           . For purchases or product enquiries, use the official Indriya website.
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
-          Last updated: <time dateTime="2026-10-26">26 October 2026</time>
+          Published: <time dateTime="2026-10-21">21 October 2026</time> · Updated:{" "}
+          <time dateTime="2026-10-26">26 October 2026</time>
         </p>
 
         <h2 className="mt-14 text-3xl text-primary">How this page was created</h2>
         <p className="mt-5 leading-relaxed text-muted-foreground">
-          The copy was written originally by Aryan Mehta for a student coursework assignment.
-          Background facts about temple jewellery traditions and jewellery care were checked against
-          the published sources listed below; no text was copied from them. Product links lead to
-          the official Indriya website for current details.
+          Aryan prepared this page for a coursework assignment with AI-assisted drafting and image
+          generation. He checked background statements against the published sources below and
+          edited the final wording. The images are illustrative, not product photographs. Product
+          links lead to the official Indriya website for current details.
+        </p>
+        <p className="mt-5 leading-relaxed text-muted-foreground">
+          The public{" "}
+          <a
+            href="https://github.com/aryanamehtabba2025-netizen/sacred-gold-pages"
+            className="border-b border-accent pb-0.5 text-primary"
+          >
+            student project source
+          </a>{" "}
+          records the page content and changes. For a correction or question about this page, use
+          the contact link above; do not post personal information publicly.
         </p>
 
         <h2 className="mt-14 text-3xl text-primary">Sources</h2>
         <ul className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground">
+          <li>
+            <a
+              href="https://www.indriya.com/"
+              className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
+            >
+              Indriya official website
+            </a>{" "}
+            — source for the brand's own product and policy claims. Confirm the current details
+            there before buying.
+          </li>
           <li>
             <a
               href={SOURCE_URL}
