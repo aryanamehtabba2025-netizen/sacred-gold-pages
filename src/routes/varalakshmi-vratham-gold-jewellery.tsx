@@ -560,6 +560,20 @@ function VaralakshmiPage() {
             craft reference and links to Indriya’s official pages. It is not an official store or a
             product catalogue.
           </p>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            For this coursework project, I compared jewellery questions from Google search with
+            published craft information and Indriya’s own product and policy pages. I edited the
+            resulting answers into short, independently readable summaries. I have not handled or
+            tested the illustrated pieces. If you spot an error, you can contact me through the
+            project’s{" "}
+            <a
+              className="underline underline-offset-4"
+              href="https://github.com/aryanamehtabba2025-netizen/sacred-gold-pages/issues"
+            >
+              public GitHub issues page
+            </a>
+            ; please do not post personal details there.
+          </p>
           <div className="mt-8 overflow-x-auto border border-border">
             <table className="w-full min-w-[600px] border-collapse text-left text-sm">
               <caption className="bg-secondary px-5 py-4 text-left text-base text-primary">
