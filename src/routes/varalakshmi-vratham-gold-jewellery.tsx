@@ -67,6 +67,7 @@ const webPageSchema = {
     name: "Aryan Mehta",
     description: "Student concept project; not an official Indriya store",
   },
+  datePublished: "2026-10-21",
   dateModified: "2026-10-26",
 };
 
@@ -144,7 +145,7 @@ const categories = [
     title: "Antique Lakshmi Necklaces",
     image: necklaceImg,
     alt: "Antique gold necklace with a Lakshmi motif pendant resting on ivory silk",
-    copy: "An antique gold necklace centred on the goddess, finished with kasu-inspired discs and a softly aged lustre made for pooja mornings.",
+    copy: "An antique Lakshmi necklace is a temple-jewellery style featuring the goddess motif, often paired with coin-like details. This image illustrates the design style, not a specific product for sale; check the official collection for actual materials and availability.",
     cta: "View Necklaces",
     href: "https://www.indriya.com/jewellery/neckwear",
   },
@@ -152,7 +153,7 @@ const categories = [
     title: "Temple Jewellery Bangles",
     image: banglesImg,
     alt: "Close-up of temple jewellery bangles with intricate Lakshmi-inspired detailing",
-    copy: "Temple jewellery bangles carved with deities and beaded borders, designed to stack quietly or stand alone against silk.",
+    copy: "Temple-style bangles can feature deity motifs and beaded borders. This is a design illustration, not a verified Indriya product; check the official listing for its material, size and price.",
     cta: "View Bangles",
     href: "https://www.indriya.com/jewellery/bangles",
   },
@@ -160,7 +161,7 @@ const categories = [
     title: "Antique Bridal Earrings",
     image: earringsImg,
     alt: "Antique bridal earrings styled with a South Indian silk saree",
-    copy: "Antique bridal earrings in jhumka and chandbali silhouettes, weighted for comfort through long ceremonies.",
+    copy: "Jhumka and chandbali shapes are options for a traditional bridal look. Ask the seller about the actual weight, closure and material before choosing earrings for a long ceremony.",
     cta: "View Earrings",
     href: "https://www.indriya.com/jewellery/earrings",
   },
@@ -168,7 +169,7 @@ const categories = [
     title: "South Indian Bridal Jewellery Sets",
     image: bridalSetImg,
     alt: "Bride in an ivory silk saree wearing a complete set of South Indian bridal jewellery in antique gold",
-    copy: "Complete south indian bridal jewellery sets — layered haaram, choker, belt and earrings — composed as one considered story.",
+    copy: "A South Indian bridal set may combine a long haaram, a choker, earrings and a waist belt. Confirm which pieces are included in any actual set on the official seller's page.",
     cta: "View Bridal Sets",
     href: "https://www.indriya.com/wedding",
   },
@@ -178,17 +179,17 @@ const trustCards = [
   {
     icon: BadgeCheck,
     title: "Hallmarked Gold",
-    copy: "Indriya states that its gold jewellery is BIS hallmarked; verify the details of a specific piece on its official site.",
+    copy: "Indriya says its gold jewellery is BIS hallmarked. This student page does not certify any item; verify the hallmark and product details on Indriya's official site before buying.",
   },
   {
     icon: Gem,
     title: "Pricing Information",
-    copy: "Indriya says it provides a price breakup for each piece. Check current pricing and terms on its official site.",
+    copy: "Indriya says it provides a price breakup for each piece. This page displays no live prices; check the official listing for the current metal value, making charges and other applicable costs.",
   },
   {
     icon: Repeat,
     title: "Exchange Policy",
-    copy: "Indriya describes a lifetime exchange policy. Read the current eligibility and conditions before purchase.",
+    copy: "Indriya describes a lifetime exchange policy for eligible jewellery. Its terms can change; read the official policy and confirm eligibility for the exact piece before purchase.",
   },
 ];
 
@@ -329,8 +330,10 @@ function VaralakshmiPage() {
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
           <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
             By <span className="text-primary">Aryan Mehta</span> <span aria-hidden="true">·</span>{" "}
-            Last updated <time dateTime="2026-10-26">26 October 2026</time>{" "}
-            <span aria-hidden="true">·</span> Student concept page <span aria-hidden="true">·</span>{" "}
+            Published <time dateTime="2026-10-21">21 October 2026</time>{" "}
+            <span aria-hidden="true">·</span> Updated{" "}
+            <time dateTime="2026-10-26">26 October 2026</time> <span aria-hidden="true">·</span>{" "}
+            Student concept page <span aria-hidden="true">·</span>{" "}
             <Link
               to="/about"
               className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
@@ -425,11 +428,11 @@ function VaralakshmiPage() {
                 Heritage in Every Detail
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Temple jewellery designs borrow from the grammar of South Indian shrines. A seated
-                Lakshmi is framed by an arch; lotus petals fan outward in layers; a peacock turns
-                its neck along the curve of a pendant. Kasu-inspired discs are strung so they move
-                and catch light as you do, and antique finishes are worked to look gently lived-in
-                rather than newly polished.{" "}
+                Temple jewellery refers to jewellery influenced by South Indian temple art and craft
+                traditions. Common design motifs include deities, lotuses, peacocks and coin-like
+                details. The government craft reference below describes a regional temple-jewellery
+                tradition; it does not verify the origin or construction of the illustrative pieces
+                shown here.{" "}
                 <a
                   href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html"
                   className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
@@ -438,10 +441,9 @@ function VaralakshmiPage() {
                 </a>
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                In necklace temple jewellery especially, the detail sits close to the eye — beaded
-                rims, granulated texture, and nakkashi-style surface work as a design inspiration
-                behind the ornamentation. The result is jewellery meant to be looked at slowly, and
-                worn for decades.
+                For a temple-style necklace, compare the motif, metal and finish stated in the
+                actual product listing. Ask about weight, closure and care instructions before
+                buying. This page is a student design guide, not a maker's first-hand account.
               </p>
               <a
                 href="https://www.indriya.com/temple-jewellery"
@@ -772,6 +774,10 @@ function VaralakshmiPage() {
                 { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
                 { label: "Contact", href: `${import.meta.env.BASE_URL}contact/` },
                 { label: "About this page", href: `${import.meta.env.BASE_URL}about/` },
+                {
+                  label: "Student project source",
+                  href: "https://github.com/aryanamehtabba2025-netizen/sacred-gold-pages",
+                },
                 { label: "Policies", href: "https://www.indriya.com/terms-and-conditions" },
               ].map((l) => (
                 <li key={l.label}>
