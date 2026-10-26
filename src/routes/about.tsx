@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/indriya-logo.png.asset.json";
 
 const CANONICAL = "https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/about/";
 const TITLE = "About This Page | Indriya Student Concept Project";
@@ -54,7 +53,7 @@ const links = [
   { label: "Temple Jewellery", href: "https://www.indriya.com/temple-jewellery" },
   { label: "Weddings", href: "https://www.indriya.com/wedding" },
   { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: `${import.meta.env.BASE_URL}contact/` },
   { label: "Policies", href: "https://www.indriya.com/terms-and-conditions" },
 ];
 
@@ -70,13 +69,12 @@ function AboutPage() {
       <header className="border-b border-border/70">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
           <Link to="/varalakshmi-vratham-gold-jewellery" aria-label="Indriya home">
-            <img
-              src={logoAsset.url}
-              alt="Indriya Aditya Birla Jewellery logo"
-              width={841}
-              height={650}
-              className="h-12 w-auto lg:h-14"
-            />
+            <span className="font-serif text-2xl tracking-wide text-primary">
+              Indriya{" "}
+              <span className="block font-sans text-[10px] uppercase tracking-widest">
+                Student concept
+              </span>
+            </span>
           </Link>
           <Button
             asChild
@@ -108,8 +106,11 @@ function AboutPage() {
           certify jewellery.
         </p>
         <p className="mt-6 leading-relaxed text-muted-foreground">
-          For questions about this educational project, see the <Link to="/contact" className="border-b border-accent pb-0.5 text-primary">contact page</Link>.
-          For purchases or product enquiries, use the official Indriya website.
+          For questions about this educational project, see the{" "}
+          <Link to="/contact" className="border-b border-accent pb-0.5 text-primary">
+            contact page
+          </Link>
+          . For purchases or product enquiries, use the official Indriya website.
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
           Last updated: <time dateTime="2026-10-26">26 October 2026</time>
