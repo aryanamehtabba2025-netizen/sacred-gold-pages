@@ -690,6 +690,14 @@ function VaralakshmiPage() {
             </Link>
             .
           </p>
+          <address className="mt-6 not-italic leading-relaxed text-muted-foreground">
+            <strong className="text-primary">Indriya</strong>
+            <br />
+            {STORE_ADDRESS.street}, {STORE_ADDRESS.city}, {STORE_ADDRESS.region}{" "}
+            {STORE_ADDRESS.postalCode}, India
+            <br />
+            {STORE_HOURS_LABEL}
+          </address>
         </section>
       </main>
 
