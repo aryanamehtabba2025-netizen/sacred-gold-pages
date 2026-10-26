@@ -16,7 +16,6 @@ import banglesImg from "@/assets/cat-temple-bangles.jpg";
 import earringsImg from "@/assets/cat-bridal-earrings.jpg";
 import bridalSetImg from "@/assets/cat-bridal-sets.jpg";
 import craftImg from "@/assets/craft-detail.jpg";
-import logoAsset from "@/assets/indriya-logo.png.asset.json";
 import storeImg from "@/assets/store-consultation.jpg";
 
 const SITE_ROOT = "https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages";
@@ -57,7 +56,12 @@ const webPageSchema = {
   description: DESCRIPTION,
   url: CANONICAL,
   author: { "@type": "Person", name: "Aryan Mehta", url: `${SITE_ROOT}/about/` },
-  about: { "@type": "Organization", name: "Indriya", url: "https://www.indriya.com/", description: "Official jewellery brand discussed by this independent student concept page" },
+  about: {
+    "@type": "Organization",
+    name: "Indriya",
+    url: "https://www.indriya.com/",
+    description: "Official jewellery brand discussed by this independent student concept page",
+  },
   publisher: {
     "@type": "Person",
     name: "Aryan Mehta",
@@ -227,15 +231,14 @@ function VaralakshmiPage() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
-          <a href="/" aria-label="Indriya home" className="shrink-0">
-            <img
-              src={logoAsset.url}
-              alt="Indriya Aditya Birla Jewellery logo"
-              width={841}
-              height={650}
-              className="h-12 w-auto lg:h-14"
-            />
-          </a>
+          <Link to="/" aria-label="Indriya home" className="shrink-0">
+            <span className="font-serif text-2xl tracking-wide text-primary">
+              Indriya{" "}
+              <span className="block font-sans text-[10px] uppercase tracking-widest">
+                Student concept
+              </span>
+            </span>
+          </Link>
           <nav aria-label="Primary" className="hidden lg:block">
             <ul className="flex items-center gap-8">
               {navLinks.map((l) => (
@@ -351,9 +354,9 @@ function VaralakshmiPage() {
             these pieces feel less like accessories and more like offerings.
           </p>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            This student concept explores that intent through illustrative jewellery categories,
-            not product listings. For verified designs, materials, prices, and availability, follow
-            the links to Indriya’s official website.
+            This student concept explores that intent through illustrative jewellery categories, not
+            product listings. For verified designs, materials, prices, and availability, follow the
+            links to Indriya’s official website.
           </p>
         </section>
 
@@ -471,9 +474,12 @@ function VaralakshmiPage() {
               ))}
             </div>
             <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
-              These are summaries of Indriya’s published promises, not guarantees from this student site.
-              Check the current terms on the{" "}
-              <a href="https://www.indriya.com/" className="underline underline-offset-4">official Indriya website</a>.
+              These are summaries of Indriya’s published promises, not guarantees from this student
+              site. Check the current terms on the{" "}
+              <a href="https://www.indriya.com/" className="underline underline-offset-4">
+                official Indriya website
+              </a>
+              .
             </p>
           </div>
         </section>
@@ -539,52 +545,145 @@ function VaralakshmiPage() {
         </section>
 
         {/* Research and extractable comparison */}
-        <section className="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20" aria-labelledby="research-heading">
+        <section
+          className="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20"
+          aria-labelledby="research-heading"
+        >
           <p className="eyebrow">Research notes</p>
-          <h2 id="research-heading" className="mt-3 text-3xl text-primary lg:text-4xl">Temple Jewellery at a Glance</h2>
+          <h2 id="research-heading" className="mt-3 text-3xl text-primary lg:text-4xl">
+            Temple Jewellery at a Glance
+          </h2>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            This is an educational guide by Aryan Mehta, based on the cited Government of India craft reference and links to Indriya’s official pages. It is not an official store or a product catalogue.
+            This is an educational guide by Aryan Mehta, based on the cited Government of India
+            craft reference and links to Indriya’s official pages. It is not an official store or a
+            product catalogue.
           </p>
           <div className="mt-8 overflow-x-auto border border-border">
             <table className="w-full min-w-[600px] border-collapse text-left text-sm">
-              <caption className="bg-secondary px-5 py-4 text-left text-base text-primary">Common design elements and practical selection notes</caption>
+              <caption className="bg-secondary px-5 py-4 text-left text-base text-primary">
+                Common design elements and practical selection notes
+              </caption>
               <thead className="bg-secondary/60 text-primary">
-                <tr><th scope="col" className="border-b border-border px-5 py-4">Element</th><th scope="col" className="border-b border-border px-5 py-4">Appearance</th><th scope="col" className="border-b border-border px-5 py-4">What to check</th></tr>
+                <tr>
+                  <th scope="col" className="border-b border-border px-5 py-4">
+                    Element
+                  </th>
+                  <th scope="col" className="border-b border-border px-5 py-4">
+                    Appearance
+                  </th>
+                  <th scope="col" className="border-b border-border px-5 py-4">
+                    What to check
+                  </th>
+                </tr>
               </thead>
               <tbody className="divide-y divide-border text-muted-foreground">
-                <tr><th scope="row" className="px-5 py-4 font-medium text-primary">Lakshmi motif</th><td className="px-5 py-4">A deity figure used in temple-inspired ornamentation.</td><td className="px-5 py-4">Look at motif detail, size, and how the pendant sits with the neckline.</td></tr>
-                <tr><th scope="row" className="px-5 py-4 font-medium text-primary">Peacock motif</th><td className="px-5 py-4">Curved bird forms and feather-like patterning.</td><td className="px-5 py-4">Check whether raised details catch on fabric.</td></tr>
-                <tr><th scope="row" className="px-5 py-4 font-medium text-primary">Lotus motif</th><td className="px-5 py-4">Petal shapes framing a figure or repeating along an ornament.</td><td className="px-5 py-4">Compare scale and finish with other jewellery pieces.</td></tr>
-                <tr><th scope="row" className="px-5 py-4 font-medium text-primary">Kasu-inspired discs</th><td className="px-5 py-4">Small coin-like elements used in some necklace designs.</td><td className="px-5 py-4">Check movement, weight, and secure links before wearing.</td></tr>
+                <tr>
+                  <th scope="row" className="px-5 py-4 font-medium text-primary">
+                    Lakshmi motif
+                  </th>
+                  <td className="px-5 py-4">
+                    A deity figure used in temple-inspired ornamentation.
+                  </td>
+                  <td className="px-5 py-4">
+                    Look at motif detail, size, and how the pendant sits with the neckline.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" className="px-5 py-4 font-medium text-primary">
+                    Peacock motif
+                  </th>
+                  <td className="px-5 py-4">Curved bird forms and feather-like patterning.</td>
+                  <td className="px-5 py-4">Check whether raised details catch on fabric.</td>
+                </tr>
+                <tr>
+                  <th scope="row" className="px-5 py-4 font-medium text-primary">
+                    Lotus motif
+                  </th>
+                  <td className="px-5 py-4">
+                    Petal shapes framing a figure or repeating along an ornament.
+                  </td>
+                  <td className="px-5 py-4">
+                    Compare scale and finish with other jewellery pieces.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" className="px-5 py-4 font-medium text-primary">
+                    Kasu-inspired discs
+                  </th>
+                  <td className="px-5 py-4">
+                    Small coin-like elements used in some necklace designs.
+                  </td>
+                  <td className="px-5 py-4">
+                    Check movement, weight, and secure links before wearing.
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
           <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-            Cultural background: <a className="underline underline-offset-4" href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html">Government of India, Temple Jewellery of Nagercoil</a>. Selection notes are general guidance, not product specifications.
+            Cultural background:{" "}
+            <a
+              className="underline underline-offset-4"
+              href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html"
+            >
+              Government of India, Temple Jewellery of Nagercoil
+            </a>
+            . Selection notes are general guidance, not product specifications.
           </p>
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-            Official brand links (external): <a className="underline underline-offset-4" href="https://www.indriya.com/">Indriya website</a> · <a className="underline underline-offset-4" href="https://www.adityabirla.com/en/businesses/companies/indriya">Aditya Birla Group’s Indriya page</a>. These belong to the brand, not to this unaffiliated coursework site.
+            Official brand links (external):{" "}
+            <a className="underline underline-offset-4" href="https://www.indriya.com/">
+              Indriya website
+            </a>{" "}
+            ·{" "}
+            <a
+              className="underline underline-offset-4"
+              href="https://www.adityabirla.com/en/businesses/companies/indriya"
+            >
+              Aditya Birla Group’s Indriya page
+            </a>
+            . These belong to the brand, not to this unaffiliated coursework site.
           </p>
         </section>
 
         {/* Coursework feedback examples */}
-        <section className="border-y border-border bg-secondary/40 py-16 lg:py-20" aria-labelledby="sample-feedback-heading">
+        <section
+          className="border-y border-border bg-secondary/40 py-16 lg:py-20"
+          aria-labelledby="sample-feedback-heading"
+        >
           <div className="mx-auto max-w-6xl px-5 lg:px-8">
             <p className="eyebrow">Coursework demonstration</p>
-            <h2 id="sample-feedback-heading" className="mt-3 text-3xl text-primary lg:text-4xl">Illustrative feedback examples</h2>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Fictional examples created for an SEO/SEM coursework presentation. These are not customer reviews or endorsements.</p>
+            <h2 id="sample-feedback-heading" className="mt-3 text-3xl text-primary lg:text-4xl">
+              Illustrative feedback examples
+            </h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+              Fictional examples created for an SEO/SEM coursework presentation. These are not
+              customer reviews or endorsements.
+            </p>
             <div className="mt-8 grid gap-5 md:grid-cols-3">
               <figure className="border border-border bg-card p-6">
-                <blockquote className="text-base leading-relaxed text-foreground">“The jewellery categories are easy to browse.”</blockquote>
-                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">Example visitor 1 · Fictional</figcaption>
+                <blockquote className="text-base leading-relaxed text-foreground">
+                  “The jewellery categories are easy to browse.”
+                </blockquote>
+                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                  Example visitor 1 · Fictional
+                </figcaption>
               </figure>
               <figure className="border border-border bg-card p-6">
-                <blockquote className="text-base leading-relaxed text-foreground">“The temple jewellery descriptions help explain the designs.”</blockquote>
-                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">Example visitor 2 · Fictional</figcaption>
+                <blockquote className="text-base leading-relaxed text-foreground">
+                  “The temple jewellery descriptions help explain the designs.”
+                </blockquote>
+                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                  Example visitor 2 · Fictional
+                </figcaption>
               </figure>
               <figure className="border border-border bg-card p-6">
-                <blockquote className="text-base leading-relaxed text-foreground">“The FAQ answers common bridal jewellery questions clearly.”</blockquote>
-                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">Example visitor 3 · Fictional</figcaption>
+                <blockquote className="text-base leading-relaxed text-foreground">
+                  “The FAQ answers common bridal jewellery questions clearly.”
+                </blockquote>
+                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                  Example visitor 3 · Fictional
+                </figcaption>
               </figure>
             </div>
           </div>
@@ -657,14 +756,12 @@ function VaralakshmiPage() {
       {/* Footer */}
       <footer className="bg-maroon-deep text-ivory">
         <div className="mx-auto max-w-6xl px-5 py-14 lg:px-8">
-          <img
-            src={logoAsset.url}
-            alt="Indriya Aditya Birla Jewellery logo"
-            width={841}
-            height={650}
-            loading="lazy"
-            className="h-16 w-auto brightness-0 invert"
-          />
+          <span className="font-serif text-3xl tracking-wide text-ivory">
+            Indriya{" "}
+            <span className="block font-sans text-[10px] uppercase tracking-widest">
+              Student concept
+            </span>
+          </span>
           <nav aria-label="Footer" className="mt-8">
             <ul className="grid gap-4 text-sm sm:grid-cols-3 lg:grid-cols-4">
               {[
