@@ -154,6 +154,14 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
           mainEntityOfPage: CANONICAL,
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(websiteSchema),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(localBusinessSchema),
+      },
     ],
   }),
   component: VaralakshmiPage,
