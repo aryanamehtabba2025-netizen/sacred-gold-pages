@@ -41,8 +41,8 @@ const breadcrumbSchema = {
       item: "https://www.indriya.com/temple-jewellery",
     },
     {
-          "@type": "ListItem",
-          position: 3,
+      "@type": "ListItem",
+      position: 3,
       name: "Varalakshmi Vratham Gold Jewellery",
       item: CANONICAL,
     },
@@ -324,11 +324,9 @@ function VaralakshmiPage() {
         <section className="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-24">
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
           <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
-            By <span className="text-primary">Aryan Mehta</span>{" "}
-            <span aria-hidden="true">·</span> Last updated{" "}
-            <time dateTime="2026-10-22">22 October 2026</time>{" "}
-            <span aria-hidden="true">·</span> Student concept page{" "}
-            <span aria-hidden="true">·</span>{" "}
+            By <span className="text-primary">Aryan Mehta</span> <span aria-hidden="true">·</span>{" "}
+            Last updated <time dateTime="2026-10-22">22 October 2026</time>{" "}
+            <span aria-hidden="true">·</span> Student concept page <span aria-hidden="true">·</span>{" "}
             <Link
               to="/about"
               className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
@@ -426,11 +424,11 @@ function VaralakshmiPage() {
                 Heritage in Every Detail
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Temple jewellery designs borrow from the grammar of South Indian shrines. A
-                seated Lakshmi is framed by an arch; lotus petals fan outward in layers; a peacock
-                turns its neck along the curve of a pendant. Kasu-inspired discs are strung so they
-                move and catch light as you do, and antique finishes are worked to look gently
-                lived-in rather than newly polished.{" "}
+                Temple jewellery designs borrow from the grammar of South Indian shrines. A seated
+                Lakshmi is framed by an arch; lotus petals fan outward in layers; a peacock turns
+                its neck along the curve of a pendant. Kasu-inspired discs are strung so they move
+                and catch light as you do, and antique finishes are worked to look gently lived-in
+                rather than newly polished.{" "}
                 <a
                   href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html"
                   className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
