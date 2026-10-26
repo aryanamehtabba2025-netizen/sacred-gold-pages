@@ -254,6 +254,11 @@ function VaralakshmiPage() {
             <h1 className="mt-4 max-w-xl text-[2.6rem] leading-[1.06] text-ivory sm:text-5xl lg:text-6xl">
               Varalakshmi Vratham Gold Jewellery
             </h1>
+            <p className="mt-4 flex items-center gap-2 text-sm text-ivory/70">
+              <CalendarDays aria-hidden="true" className="h-4 w-4 text-gold-soft" />
+              By Aryan Mehta · Published{" "}
+              <time dateTime="2026-10-26">26 October 2026</time>
+            </p>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-ivory/85 lg:text-lg">
               Celebrate the sacred season with temple-inspired gold jewellery that honours devotion,
               heritage, and the Lakshmi in your life.
@@ -305,6 +310,11 @@ function VaralakshmiPage() {
             chosen with a daughter in mind, years ahead of the occasion she will wear them for.
             Whichever you choose, the aim is the same — jewellery that holds its grace through the
             aarti, the visits, and every year it is brought out again.
+          </p>
+          <p className="mt-6 leading-relaxed text-muted-foreground">
+            This guide is written from our styling team's first-hand experience helping families
+            choose jewellery for Vratham mornings, weddings, and festive visits — what to wear,
+            how to layer it, and how to care for each piece so it lasts for the next generation.
           </p>
         </section>
 
@@ -558,6 +568,15 @@ function VaralakshmiPage() {
             loading="lazy"
             className="h-16 w-auto brightness-0 invert"
           />
+          <a
+            href="https://www.instagram.com/indriyajewels/?hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex w-fit items-center gap-2.5 rounded-full border border-gold-soft/50 px-5 py-2.5 text-sm text-ivory transition-all hover:border-gold-soft hover:bg-gold-soft/10 hover:text-gold-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-soft"
+          >
+            <Instagram aria-hidden="true" className="h-5 w-5" />
+            Follow us on Instagram
+          </a>
           <nav aria-label="Footer" className="mt-8">
             <ul className="grid gap-4 text-sm sm:grid-cols-3 lg:grid-cols-4">
               {[
