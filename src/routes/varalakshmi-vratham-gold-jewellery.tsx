@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { BadgeCheck, Gem, Repeat } from "lucide-react";
+import { BadgeCheck, CalendarDays, Gem, Instagram, Repeat } from "lucide-react";
 import { templeJewelleryFaqs } from "@/lib/temple-jewellery-faqs";
 import { bridalJewelleryFaqs } from "@/lib/bridal-jewellery-faqs";
 import { varalakshmiVrathamFaqs } from "@/lib/varalakshmi-vratham-faqs";
@@ -63,6 +63,9 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
+      { property: "article:published_time", content: "2026-10-26" },
+      { property: "article:modified_time", content: "2026-10-26" },
+      { property: "article:author", content: "Aryan Mehta" },
     ],
     links: [{ rel: "canonical", href: CANONICAL }],
     scripts: [
@@ -80,6 +83,20 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
             name: q,
             acceptedAnswer: { "@type": "Answer", text: a },
           })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: TITLE,
+          description: DESCRIPTION,
+          author: { "@type": "Person", name: "Aryan Mehta" },
+          publisher: { "@type": "Organization", name: "Indriya" },
+          datePublished: "2026-10-26",
+          dateModified: "2026-10-26",
+          mainEntityOfPage: CANONICAL,
         }),
       },
     ],
