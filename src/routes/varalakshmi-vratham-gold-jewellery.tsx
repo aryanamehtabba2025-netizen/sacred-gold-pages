@@ -19,10 +19,11 @@ import craftImg from "@/assets/craft-detail.jpg";
 import logoAsset from "@/assets/indriya-logo.png.asset.json";
 import storeImg from "@/assets/store-consultation.jpg";
 
-const CANONICAL = "https://www.indriya.com/varalakshmi-vratham-gold-jewellery";
-const TITLE = "Varalakshmi Vratham Gold Jewellery | Indriya";
+const SITE_ROOT = "https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages";
+const CANONICAL = `${SITE_ROOT}/varalakshmi-vratham-gold-jewellery/`;
+const TITLE = "Varalakshmi Vratham Gold Jewellery | Student Concept Guide";
 const DESCRIPTION =
-  "Discover Varalakshmi Vratham gold jewellery by Indriya, from Lakshmi necklaces and temple bangles to antique earrings for sacred celebrations.";
+  "An independent student guide to Varalakshmi Vratham gold jewellery, temple motifs, bridal styling, and verified Indriya links.";
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -32,13 +33,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.indriya.com/",
+      item: `${SITE_ROOT}/`,
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "Temple Jewellery",
-      item: "https://www.indriya.com/temple-jewellery",
+      name: "Temple Jewellery Guide",
+      item: `${SITE_ROOT}/temple-jewellery-guide/`,
     },
     {
       "@type": "ListItem",
@@ -55,20 +56,21 @@ const webPageSchema = {
   name: TITLE,
   description: DESCRIPTION,
   url: CANONICAL,
-  author: { "@type": "Person", name: "Aryan Mehta" },
+  author: { "@type": "Person", name: "Aryan Mehta", url: `${SITE_ROOT}/about/` },
+  about: { "@type": "Organization", name: "Indriya", url: "https://www.indriya.com/", description: "Official jewellery brand discussed by this independent student concept page" },
   publisher: {
     "@type": "Person",
     name: "Aryan Mehta",
     description: "Student concept project; not an official Indriya store",
   },
-  dateModified: "2026-10-22",
+  dateModified: "2026-10-26",
 };
 
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Indriya Temple Jewellery (Student Concept Project)",
-  url: "https://sacred-gold-pages.lovable.app/",
+  url: `${SITE_ROOT}/`,
   description:
     "A student concept page about temple-inspired gold jewellery; not an official Indriya store.",
   inLanguage: "en",
@@ -76,8 +78,7 @@ const webSiteSchema = {
     "@type": "Person",
     name: "Aryan Mehta",
     description: "Student concept project; not an official Indriya store",
-    telephone: "+91-9920792272",
-    url: "https://sacred-gold-pages.lovable.app/about",
+    url: `${SITE_ROOT}/about/`,
   },
 };
 
@@ -172,18 +173,18 @@ const categories = [
 const trustCards = [
   {
     icon: BadgeCheck,
-    title: "BIS Hallmarked Gold",
-    copy: "Every piece is described with its gold purity and hallmark details.",
+    title: "Hallmarked Gold",
+    copy: "Indriya states that its gold jewellery is BIS hallmarked; verify the details of a specific piece on its official site.",
   },
   {
     icon: Gem,
-    title: "Transparent Pricing",
-    copy: "Metal rate, making and applicable charges shown clearly before you buy.",
+    title: "Pricing Information",
+    copy: "Indriya says it provides a price breakup for each piece. Check current pricing and terms on its official site.",
   },
   {
     icon: Repeat,
-    title: "Lifetime Exchange",
-    copy: "Exchange your jewellery as tastes and occasions change, per policy terms.",
+    title: "Exchange Policy",
+    copy: "Indriya describes a lifetime exchange policy. Read the current eligibility and conditions before purchase.",
   },
 ];
 
@@ -325,7 +326,7 @@ function VaralakshmiPage() {
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
           <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
             By <span className="text-primary">Aryan Mehta</span> <span aria-hidden="true">·</span>{" "}
-            Last updated <time dateTime="2026-10-22">22 October 2026</time>{" "}
+            Last updated <time dateTime="2026-10-26">26 October 2026</time>{" "}
             <span aria-hidden="true">·</span> Student concept page <span aria-hidden="true">·</span>{" "}
             <Link
               to="/about"
@@ -350,12 +351,9 @@ function VaralakshmiPage() {
             these pieces feel less like accessories and more like offerings.
           </p>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            The official Indriya festive edit is built around that intent. There are pieces designed
-            to be the single statement of the morning, and lighter designs meant to be layered with
-            what you already own. Some are made for a first purchase after a wedding; others are
-            chosen with a daughter in mind, years ahead of the occasion she will wear them for.
-            Whichever you choose, the aim is the same — jewellery that holds its grace through the
-            aarti, the visits, and every year it is brought out again.
+            This student concept explores that intent through illustrative jewellery categories,
+            not product listings. For verified designs, materials, prices, and availability, follow
+            the links to Indriya’s official website.
           </p>
         </section>
 
@@ -459,7 +457,7 @@ function VaralakshmiPage() {
         >
           <div className="mx-auto max-w-6xl px-5 lg:px-8">
             <h2 id="trust-heading" className="text-center text-3xl text-primary lg:text-4xl">
-              Crafted for a Legacy of Trust
+              What Indriya Says on Its Official Site
             </h2>
             <div className="mt-12 grid gap-10 sm:grid-cols-3">
               {trustCards.map((t) => (
@@ -473,8 +471,9 @@ function VaralakshmiPage() {
               ))}
             </div>
             <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
-              Editable placeholder: these three assurances are to be reviewed and confirmed by the
-              Indriya brand team against live policy before publishing.
+              These are summaries of Indriya’s published promises, not guarantees from this student site.
+              Check the current terms on the{" "}
+              <a href="https://www.indriya.com/" className="underline underline-offset-4">official Indriya website</a>.
             </p>
           </div>
         </section>
@@ -537,6 +536,35 @@ function VaralakshmiPage() {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* Research and extractable comparison */}
+        <section className="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20" aria-labelledby="research-heading">
+          <p className="eyebrow">Research notes</p>
+          <h2 id="research-heading" className="mt-3 text-3xl text-primary lg:text-4xl">Temple Jewellery at a Glance</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            This is an educational guide by Aryan Mehta, based on the cited Government of India craft reference and links to Indriya’s official pages. It is not an official store or a product catalogue.
+          </p>
+          <div className="mt-8 overflow-x-auto border border-border">
+            <table className="w-full min-w-[600px] border-collapse text-left text-sm">
+              <caption className="bg-secondary px-5 py-4 text-left text-base text-primary">Common design elements and practical selection notes</caption>
+              <thead className="bg-secondary/60 text-primary">
+                <tr><th scope="col" className="border-b border-border px-5 py-4">Element</th><th scope="col" className="border-b border-border px-5 py-4">Appearance</th><th scope="col" className="border-b border-border px-5 py-4">What to check</th></tr>
+              </thead>
+              <tbody className="divide-y divide-border text-muted-foreground">
+                <tr><th scope="row" className="px-5 py-4 font-medium text-primary">Lakshmi motif</th><td className="px-5 py-4">A deity figure used in temple-inspired ornamentation.</td><td className="px-5 py-4">Look at motif detail, size, and how the pendant sits with the neckline.</td></tr>
+                <tr><th scope="row" className="px-5 py-4 font-medium text-primary">Peacock motif</th><td className="px-5 py-4">Curved bird forms and feather-like patterning.</td><td className="px-5 py-4">Check whether raised details catch on fabric.</td></tr>
+                <tr><th scope="row" className="px-5 py-4 font-medium text-primary">Lotus motif</th><td className="px-5 py-4">Petal shapes framing a figure or repeating along an ornament.</td><td className="px-5 py-4">Compare scale and finish with other jewellery pieces.</td></tr>
+                <tr><th scope="row" className="px-5 py-4 font-medium text-primary">Kasu-inspired discs</th><td className="px-5 py-4">Small coin-like elements used in some necklace designs.</td><td className="px-5 py-4">Check movement, weight, and secure links before wearing.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
+            Cultural background: <a className="underline underline-offset-4" href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html">Government of India, Temple Jewellery of Nagercoil</a>. Selection notes are general guidance, not product specifications.
+          </p>
+          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+            Official brand links (external): <a className="underline underline-offset-4" href="https://www.indriya.com/">Indriya website</a> · <a className="underline underline-offset-4" href="https://www.adityabirla.com/en/businesses/companies/indriya">Aditya Birla Group’s Indriya page</a>. These belong to the brand, not to this unaffiliated coursework site.
+          </p>
         </section>
 
         {/* Coursework feedback examples */}
@@ -661,8 +689,8 @@ function VaralakshmiPage() {
             </ul>
           </nav>
           <p className="mt-10 text-xs text-ivory/60">
-            &copy; {new Date().getFullYear()} Indriya. Imagery is representational. Student
-            assignment demo; no product availability or guarantees are asserted.
+            Student concept project by Aryan Mehta. Not affiliated with Indriya. Imagery is
+            representational; no products are sold on this site.
           </p>
         </div>
       </footer>
