@@ -92,9 +92,10 @@ function AboutPage() {
         <p className="eyebrow">About</p>
         <h1 className="mt-4 text-4xl text-primary lg:text-5xl">About This Page</h1>
         <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-          This is a student concept page created by <span className="text-primary">Aryan Mehta</span>{" "}
-          as an educational project. It is not an official Indriya store, and no product
-          availability, prices, policies, or guarantees are asserted here.
+          This is a student concept page created by{" "}
+          <span className="text-primary">Aryan Mehta</span> as an educational project. It is not an
+          official Indriya store, and no product availability, prices, policies, or guarantees are
+          asserted here.
         </p>
         <p className="mt-6 leading-relaxed text-muted-foreground">
           Category links on the landing page point to the official Indriya website (indriya.com) so
@@ -122,9 +123,9 @@ function AboutPage() {
         <h2 className="mt-14 text-3xl text-primary">How this page was created</h2>
         <p className="mt-5 leading-relaxed text-muted-foreground">
           The copy was written originally by Aryan Mehta for a student coursework assignment.
-          Background facts about temple jewellery traditions and jewellery care were checked
-          against the published sources listed below; no text was copied from them. Product links
-          lead to the official Indriya website for current details.
+          Background facts about temple jewellery traditions and jewellery care were checked against
+          the published sources listed below; no text was copied from them. Product links lead to
+          the official Indriya website for current details.
         </p>
 
         <h2 className="mt-14 text-3xl text-primary">Sources</h2>

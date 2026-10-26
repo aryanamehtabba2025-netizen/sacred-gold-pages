@@ -41,8 +41,8 @@ const breadcrumbSchema = {
       item: "https://www.indriya.com/temple-jewellery",
     },
     {
-          "@type": "ListItem",
-          position: 3,
+      "@type": "ListItem",
+      position: 3,
       name: "Varalakshmi Vratham Gold Jewellery",
       item: CANONICAL,
     },
@@ -62,6 +62,23 @@ const webPageSchema = {
     description: "Student concept project; not an official Indriya store",
   },
   dateModified: "2026-10-22",
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Indriya Temple Jewellery (Student Concept Project)",
+  url: "https://sacred-gold-pages.lovable.app/",
+  description:
+    "A student concept page about temple-inspired gold jewellery; not an official Indriya store.",
+  inLanguage: "en",
+  publisher: {
+    "@type": "Person",
+    name: "Aryan Mehta",
+    description: "Student concept project; not an official Indriya store",
+    telephone: "+91-9920792272",
+    url: "https://sacred-gold-pages.lovable.app/about",
+  },
 };
 
 export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
@@ -99,6 +116,10 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
       {
         type: "application/ld+json",
         children: JSON.stringify(webPageSchema),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(webSiteSchema),
       },
     ],
   }),
@@ -180,7 +201,7 @@ const faqs = [
   },
   {
     q: "How do I choose an antique Lakshmi necklace?",
-    a: "Start with length and neckline. A short choker sits well over a high-necked blouse, while a longer haaram suits a draped saree. Then consider the finish: matte antique gold reads traditional, polished gold reads brighter in photographs. Our store consultants can help you compare weights and lengths in person.",
+    a: "Start with length and neckline. A short choker sits well over a high-necked blouse, while a longer haaram suits a draped saree. Then consider the finish: matte antique gold reads traditional, polished gold reads brighter in photographs. For weights and lengths in person, contact the Indriya store team through the official website.",
   },
   {
     q: "Can temple jewellery be worn beyond festive occasions?",
@@ -303,11 +324,9 @@ function VaralakshmiPage() {
         <section className="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-24">
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
           <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
-            By <span className="text-primary">Aryan Mehta</span>{" "}
-            <span aria-hidden="true">·</span> Last updated{" "}
-            <time dateTime="2026-10-22">22 October 2026</time>{" "}
-            <span aria-hidden="true">·</span> Student concept page{" "}
-            <span aria-hidden="true">·</span>{" "}
+            By <span className="text-primary">Aryan Mehta</span> <span aria-hidden="true">·</span>{" "}
+            Last updated <time dateTime="2026-10-22">22 October 2026</time>{" "}
+            <span aria-hidden="true">·</span> Student concept page <span aria-hidden="true">·</span>{" "}
             <Link
               to="/about"
               className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
@@ -331,8 +350,8 @@ function VaralakshmiPage() {
             these pieces feel less like accessories and more like offerings.
           </p>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            At Indriya, our festive edit is built around that intent. There are pieces designed to
-            be the single statement of the morning, and lighter designs meant to be layered with
+            The official Indriya festive edit is built around that intent. There are pieces designed
+            to be the single statement of the morning, and lighter designs meant to be layered with
             what you already own. Some are made for a first purchase after a wedding; others are
             chosen with a daughter in mind, years ahead of the occasion she will wear them for.
             Whichever you choose, the aim is the same — jewellery that holds its grace through the
@@ -405,11 +424,17 @@ function VaralakshmiPage() {
                 Heritage in Every Detail
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Our temple jewellery designs borrow from the grammar of South Indian shrines. A
-                seated Lakshmi is framed by an arch; lotus petals fan outward in layers; a peacock
-                turns its neck along the curve of a pendant. Kasu-inspired discs are strung so they
-                move and catch light as you do, and antique finishes are worked to look gently
-                lived-in rather than newly polished.
+                Temple jewellery designs borrow from the grammar of South Indian shrines. A seated
+                Lakshmi is framed by an arch; lotus petals fan outward in layers; a peacock turns
+                its neck along the curve of a pendant. Kasu-inspired discs are strung so they move
+                and catch light as you do, and antique finishes are worked to look gently lived-in
+                rather than newly polished.{" "}
+                <a
+                  href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html"
+                  className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
+                >
+                  Source: Govt. of India, DC Handicrafts
+                </a>
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 In necklace temple jewellery especially, the detail sits close to the eye — beaded
@@ -598,6 +623,7 @@ function VaralakshmiPage() {
                 { label: "Weddings", href: "https://www.indriya.com/wedding" },
                 { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
                 { label: "Contact", href: "/contact" },
+                { label: "About this page", href: "/about" },
                 { label: "Policies", href: "https://www.indriya.com/terms-and-conditions" },
               ].map((l) => (
                 <li key={l.label}>

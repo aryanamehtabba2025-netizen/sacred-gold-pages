@@ -30,7 +30,13 @@ export const Route = createFileRoute("/temple-jewellery-guide")({
           headline: "Temple Jewellery Guide",
           description: DESCRIPTION,
           author: { "@type": "Person", name: "Aryan Mehta" },
+          publisher: {
+            "@type": "Person",
+            name: "Aryan Mehta",
+            description: "Student concept project; not an official Indriya store",
+          },
           datePublished: "2026-10-19",
+          dateModified: "2026-10-22",
           mainEntityOfPage: URL,
         }),
       },
@@ -191,6 +197,23 @@ function TempleJewelleryGuide() {
                 If a fitting feels loose or a finish looks damaged, seek advice from the maker or a
                 qualified jewellery professional before wearing or cleaning it further.
               </p>
+            </section>
+            <section aria-labelledby="sources-heading">
+              <h2 id="sources-heading" className="text-3xl text-primary">
+                Sources
+              </h2>
+              <ul className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <li>
+                  <a
+                    href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html"
+                    className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
+                  >
+                    Temple Jewellery of Nagercoil
+                  </a>{" "}
+                  — Government of India, Office of the Development Commissioner (Handicrafts).
+                  Background reading on the craft tradition; no text copied.
+                </li>
+              </ul>
             </section>
             <nav aria-label="Related reading" className="border-t border-border pt-8">
               <h2 className="text-2xl text-primary">Continue exploring</h2>
