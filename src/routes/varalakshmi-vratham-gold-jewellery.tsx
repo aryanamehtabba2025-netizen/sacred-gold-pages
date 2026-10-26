@@ -568,6 +568,51 @@ function VaralakshmiPage() {
           </ul>
         </section>
 
+        {/* Price guide table */}
+        <section
+          className="mx-auto max-w-6xl px-5 pb-16 lg:px-8 lg:pb-20"
+          aria-labelledby="price-guide-heading"
+        >
+          <h2 id="price-guide-heading" className="text-3xl text-primary lg:text-4xl">
+            Temple Bridal Jewellery Price Guide
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+            Indicative Indian market ranges for reference only — always check the current
+            product listing for actual prices.
+          </p>
+          <div className="mt-8 overflow-x-auto border border-border">
+            <table className="w-full min-w-[560px] text-left text-sm">
+              <caption className="sr-only">
+                Indicative temple bridal jewellery price ranges by material type
+              </caption>
+              <thead className="bg-secondary text-primary">
+                <tr>
+                  <th scope="col" className="px-5 py-3 font-semibold">Type</th>
+                  <th scope="col" className="px-5 py-3 font-semibold">Typical materials</th>
+                  <th scope="col" className="px-5 py-3 font-semibold">Indicative price range</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border bg-card text-foreground">
+                <tr>
+                  <th scope="row" className="px-5 py-4 font-medium">Imitation / gold-plated</th>
+                  <td className="px-5 py-4">Alloy base, matte gold polish, CZ stones, synthetic pearls</td>
+                  <td className="px-5 py-4">₹800 – ₹5,000</td>
+                </tr>
+                <tr>
+                  <th scope="row" className="px-5 py-4 font-medium">925 sterling silver</th>
+                  <td className="px-5 py-4">Sterling silver with 24K gold plating</td>
+                  <td className="px-5 py-4">₹15,000 – ₹80,000</td>
+                </tr>
+                <tr>
+                  <th scope="row" className="px-5 py-4 font-medium">22K real gold</th>
+                  <td className="px-5 py-4">Hand-engraved nakkashi work, real rubies and pearls</td>
+                  <td className="px-5 py-4">₹4 lakh – ₹25 lakh+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         {/* Bridal FAQ */}
         <section
           id="bridal-jewellery-faqs"
