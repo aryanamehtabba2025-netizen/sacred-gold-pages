@@ -78,7 +78,11 @@ const localBusinessSchema = {
       closes: "20:00",
     },
   ],
-  sameAs: ["https://www.instagram.com/indriyajewels/"],
+  sameAs: [
+    "https://www.instagram.com/indriyajewels/",
+    "https://x.com/indriyajewels",
+    "https://www.youtube.com/@indriyajewels",
+  ],
 };
 
 const breadcrumbSchema = {
