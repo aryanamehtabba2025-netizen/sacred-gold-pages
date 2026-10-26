@@ -577,8 +577,8 @@ function VaralakshmiPage() {
             Temple Bridal Jewellery Price Guide
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-            Indicative Indian market ranges for reference only — always check the current
-            product listing for actual prices.
+            Indicative Indian market ranges for reference only — always check the current product
+            listing for actual prices.
           </p>
           <div className="mt-8 overflow-x-auto border border-border">
             <table className="w-full min-w-[560px] text-left text-sm">
@@ -587,24 +587,38 @@ function VaralakshmiPage() {
               </caption>
               <thead className="bg-secondary text-primary">
                 <tr>
-                  <th scope="col" className="px-5 py-3 font-semibold">Type</th>
-                  <th scope="col" className="px-5 py-3 font-semibold">Typical materials</th>
-                  <th scope="col" className="px-5 py-3 font-semibold">Indicative price range</th>
+                  <th scope="col" className="px-5 py-3 font-semibold">
+                    Type
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-semibold">
+                    Typical materials
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-semibold">
+                    Indicative price range
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border bg-card text-foreground">
                 <tr>
-                  <th scope="row" className="px-5 py-4 font-medium">Imitation / gold-plated</th>
-                  <td className="px-5 py-4">Alloy base, matte gold polish, CZ stones, synthetic pearls</td>
+                  <th scope="row" className="px-5 py-4 font-medium">
+                    Imitation / gold-plated
+                  </th>
+                  <td className="px-5 py-4">
+                    Alloy base, matte gold polish, CZ stones, synthetic pearls
+                  </td>
                   <td className="px-5 py-4">₹800 – ₹5,000</td>
                 </tr>
                 <tr>
-                  <th scope="row" className="px-5 py-4 font-medium">925 sterling silver</th>
+                  <th scope="row" className="px-5 py-4 font-medium">
+                    925 sterling silver
+                  </th>
                   <td className="px-5 py-4">Sterling silver with 24K gold plating</td>
                   <td className="px-5 py-4">₹15,000 – ₹80,000</td>
                 </tr>
                 <tr>
-                  <th scope="row" className="px-5 py-4 font-medium">22K real gold</th>
+                  <th scope="row" className="px-5 py-4 font-medium">
+                    22K real gold
+                  </th>
                   <td className="px-5 py-4">Hand-engraved nakkashi work, real rubies and pearls</td>
                   <td className="px-5 py-4">₹4 lakh – ₹25 lakh+</td>
                 </tr>
