@@ -80,7 +80,7 @@ function TempleJewelleryGuide() {
               jewellery tradition.
             </p>
             <p className="mt-6 text-sm text-muted-foreground">
-              By <span className="text-primary">Aryan Mehta</span> <span aria-hidden="true">·</span>{" "}
+              By <Link to="/about" className="text-primary underline underline-offset-4">Aryan Mehta · SYBBA Marketing Major</Link> <span aria-hidden="true">·</span>{" "}
               <time dateTime="2026-10-19">19 October 2026</time>
             </p>
             <p className="mt-3 text-xs text-muted-foreground">

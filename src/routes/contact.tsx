@@ -82,8 +82,8 @@ function ContactPage() {
           .
         </p>
         <p className="mt-4 leading-relaxed text-muted-foreground">
-          Our team is happy to help you with temple jewellery designs, antique gold necklaces,
-          bangles, earrings and bridal sets, or to arrange a boutique appointment.
+          This is the contact number supplied for this student assignment. For current product
+          information or boutique appointments, use Indriya's official website. Learn more on our <a href="/about" className="text-primary underline underline-offset-4">About page</a>.
         </p>
         <Button asChild size="lg" className="mt-10 bg-gold text-maroon-deep hover:bg-gold-soft">
           <a href="tel:+919920792272">Call 9920792272</a>
