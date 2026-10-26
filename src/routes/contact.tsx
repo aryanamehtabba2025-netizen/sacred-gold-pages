@@ -38,6 +38,7 @@ const links = [
     label: "Store Locator",
     href: "https://www.indriya.com/jewellery-stores",
   },
+  { label: "About this page", href: "/about" },
   {
     label: "Policies",
     href: "https://www.indriya.com/terms-and-conditions",

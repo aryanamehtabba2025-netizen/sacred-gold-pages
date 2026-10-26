@@ -1,7 +1,10 @@
 # Indriya Temple Jewellery
 
-> A landing page about temple-inspired gold jewellery, including bridal styles, design information, and frequently asked questions.
+> A student concept project about temple-inspired gold jewellery, including bridal styles, design information, and frequently asked questions. Not an official Indriya store; no product availability, prices, policies, or guarantees are asserted.
 
-## Main page
+## Pages
 
-- [Indriya Temple Jewellery](/varalakshmi-vratham-gold-jewellery): Explore the landing page and its jewellery FAQs.
+- [Varalakshmi Vratham Gold Jewellery](/varalakshmi-vratham-gold-jewellery): The main landing page — sacred-celebration jewellery categories, craftsmanship notes, trust and store links, and jewellery FAQs.
+- [Temple Jewellery Guide](/temple-jewellery-guide): An educational guide to temple jewellery motifs, South Indian bridal styling, and practical care, with sources.
+- [About This Page](/about): Who created this student concept page, how it was researched, and how to contact the creator.
+- [Contact](/contact): How to reach the creator of this page by phone.
