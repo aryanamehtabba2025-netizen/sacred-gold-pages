@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/indriya-logo.png.asset.json";
 import craftImg from "@/assets/craft-detail.jpg";
 
-const TITLE = "Temple Jewellery Guide | Indriya";
+const TITLE = "Temple Jewellery Guide | Student Concept";
 const DESCRIPTION =
   "Explore temple jewellery’s cultural context, Lakshmi, peacock and lotus motifs, bridal styling and practical care in this guide by Aryan Mehta.";
-const URL = "https://sacred-gold-pages.lovable.app/temple-jewellery-guide";
+const URL =
+  "https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/temple-jewellery-guide/";
 
 export const Route = createFileRoute("/temple-jewellery-guide")({
   head: () => ({
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/temple-jewellery-guide")({
             description: "Student concept project; not an official Indriya store",
           },
           datePublished: "2026-10-19",
-          dateModified: "2026-10-22",
+          dateModified: "2026-10-26",
           mainEntityOfPage: URL,
         }),
       },
@@ -57,13 +57,12 @@ function TempleJewelleryGuide() {
       <header className="border-b border-border/70 bg-background">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
           <Link to="/varalakshmi-vratham-gold-jewellery" aria-label="Indriya landing page">
-            <img
-              src={logoAsset.url}
-              alt="Indriya Aditya Birla Jewellery logo"
-              width={841}
-              height={650}
-              className="h-12 w-auto lg:h-14"
-            />
+            <span className="font-serif text-2xl tracking-wide text-primary">
+              Indriya{" "}
+              <span className="block font-sans text-[10px] uppercase tracking-widest">
+                Student concept
+              </span>
+            </span>
           </Link>
           <Button
             asChild
