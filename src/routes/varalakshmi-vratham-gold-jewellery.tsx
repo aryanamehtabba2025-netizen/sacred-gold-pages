@@ -111,7 +111,7 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: bridalJewelleryFaqs.map(({ q, a }) => ({
+          mainEntity: [...bridalJewelleryFaqs, ...templeJewelleryFaqs].map(({ q, a }) => ({
             "@type": "Question",
             name: q,
             acceptedAnswer: { "@type": "Answer", text: a },
