@@ -12,12 +12,15 @@ describe("screenshot-sourced review rules", () => {
   });
 
   test("preserves the actual mixed ratings", () => {
-    assert.deepEqual(customerReviews.map(({ name, rating }) => [name, rating]), [
-      ["Shibapriya Dutta", 5],
-      ["Dhyanu Jindal", 5],
-      ["Akshata pawar", 5],
-      ["Harshpreet", 4],
-      ["Smita Nagaokar", 4],
-    ]);
+    assert.deepEqual(
+      customerReviews.map(({ name, rating }) => [name, rating]),
+      [
+        ["Shibapriya Dutta", 5],
+        ["Dhyanu Jindal", 5],
+        ["Akshata pawar", 5],
+        ["Harshpreet", 4],
+        ["Smita Nagaokar", 4],
+      ],
+    );
   });
 });
