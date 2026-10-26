@@ -515,7 +515,7 @@ function VaralakshmiPage() {
             </Button>
             <h3 className="mt-12 text-2xl text-primary">Varalakshmi Vratham Jewellery FAQs</h3>
             <Accordion type="single" collapsible className="mt-8">
-              {faqs.map((f, i) => (
+              {varalakshmiVrathamFaqs.map((f, i) => (
                 <AccordionItem key={f.q} value={`faq-${i}`}>
                   <AccordionTrigger className="text-left font-display text-lg text-primary hover:no-underline">
                     {f.q}
