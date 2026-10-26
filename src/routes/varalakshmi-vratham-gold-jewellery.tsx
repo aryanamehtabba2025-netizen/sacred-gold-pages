@@ -770,8 +770,8 @@ function VaralakshmiPage() {
                 { label: "Temple Jewellery", href: "https://www.indriya.com/temple-jewellery" },
                 { label: "Weddings", href: "https://www.indriya.com/wedding" },
                 { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
-                { label: "Contact", href: "/contact" },
-                { label: "About this page", href: "/about" },
+                { label: "Contact", href: `${import.meta.env.BASE_URL}contact/` },
+                { label: "About this page", href: `${import.meta.env.BASE_URL}about/` },
                 { label: "Policies", href: "https://www.indriya.com/terms-and-conditions" },
               ].map((l) => (
                 <li key={l.label}>
