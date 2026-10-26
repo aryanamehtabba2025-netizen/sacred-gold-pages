@@ -33,7 +33,8 @@ const STORE_ADDRESS = {
   postalCode: "400070",
   country: "IN",
 };
-const STORE_HOURS_LABEL = "Open daily, 11:00 AM – 8:00 PM (representative hours — please confirm with the store before visiting)";
+const STORE_HOURS_LABEL =
+  "Open daily, 11:00 AM – 8:00 PM (representative hours — please confirm with the store before visiting)";
 
 const websiteSchema = {
   "@context": "https://schema.org",
