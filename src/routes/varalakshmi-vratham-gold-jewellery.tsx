@@ -172,7 +172,6 @@ const exploreLinks = [
   { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
 ];
 
-
 function VaralakshmiPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -256,8 +255,7 @@ function VaralakshmiPage() {
             </h1>
             <p className="mt-4 flex items-center gap-2 text-sm text-ivory/70">
               <CalendarDays aria-hidden="true" className="h-4 w-4 text-gold-soft" />
-              By Aryan Mehta · Published{" "}
-              <time dateTime="2026-10-26">26 October 2026</time>
+              By Aryan Mehta · Published <time dateTime="2026-10-26">26 October 2026</time>
             </p>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-ivory/85 lg:text-lg">
               Celebrate the sacred season with temple-inspired gold jewellery that honours devotion,
@@ -313,8 +311,8 @@ function VaralakshmiPage() {
           </p>
           <p className="mt-6 leading-relaxed text-muted-foreground">
             This guide is written from our styling team's first-hand experience helping families
-            choose jewellery for Vratham mornings, weddings, and festive visits — what to wear,
-            how to layer it, and how to care for each piece so it lasts for the next generation.
+            choose jewellery for Vratham mornings, weddings, and festive visits — what to wear, how
+            to layer it, and how to care for each piece so it lasts for the next generation.
           </p>
         </section>
 
