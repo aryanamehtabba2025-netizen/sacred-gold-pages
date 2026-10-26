@@ -67,7 +67,7 @@ const webPageSchema = {
     name: "Aryan Mehta",
     description: "Student concept project; not an official Indriya store",
   },
-  datePublished: "2026-10-21",
+  datePublished: "2026-10-26",
   dateModified: "2026-10-26",
 };
 
@@ -330,7 +330,7 @@ function VaralakshmiPage() {
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
           <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
             By <span className="text-primary">Aryan Mehta</span> <span aria-hidden="true">·</span>{" "}
-            Published <time dateTime="2026-10-21">21 October 2026</time>{" "}
+            Published <time dateTime="2026-10-26">26 October 2026</time>{" "}
             <span aria-hidden="true">·</span> Updated{" "}
             <time dateTime="2026-10-26">26 October 2026</time> <span aria-hidden="true">·</span>{" "}
             Student concept page <span aria-hidden="true">·</span>{" "}
@@ -573,6 +573,14 @@ function VaralakshmiPage() {
               public GitHub issues page
             </a>
             ; please do not post personal details there.
+          </p>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            Author credentials: Aryan Mehta is the student researcher and editor of this guide, not
+            a jeweller, gemmologist or Indriya employee. For questions or corrections, email{" "}
+            <a className="underline underline-offset-4" href="mailto:7aryanmehta@gmail.com">
+              7aryanmehta@gmail.com
+            </a>
+            .
           </p>
           <div className="mt-8 overflow-x-auto border border-border">
             <table className="w-full min-w-[600px] border-collapse text-left text-sm">
