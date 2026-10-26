@@ -25,6 +25,62 @@ const TITLE = "Varalakshmi Vratham Gold Jewellery | Indriya";
 const DESCRIPTION =
   "Discover Varalakshmi Vratham gold jewellery by Indriya, from Lakshmi necklaces and temple bangles to antique earrings for sacred celebrations.";
 
+const SITE_URL = "https://www.indriya.com";
+const STORE_ADDRESS = {
+  street: "Equinox Business Park, Ambedkar Nagar, Kurla West, Kurla",
+  city: "Mumbai",
+  region: "Maharashtra",
+  postalCode: "400070",
+  country: "IN",
+};
+const STORE_HOURS_LABEL =
+  "Open daily, 11:00 AM – 8:00 PM (representative hours — please confirm with the store before visiting)";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Indriya",
+  url: SITE_URL,
+  publisher: { "@type": "Organization", name: "Indriya", url: SITE_URL },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  additionalType: "https://schema.org/JewelryStore",
+  name: "Indriya",
+  url: SITE_URL,
+  telephone: "+91-9920792272",
+  image: `${SITE_URL}/temple-jewellery`,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: STORE_ADDRESS.street,
+    addressLocality: STORE_ADDRESS.city,
+    addressRegion: STORE_ADDRESS.region,
+    postalCode: STORE_ADDRESS.postalCode,
+    addressCountry: STORE_ADDRESS.country,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 19.0728,
+    longitude: 72.8826,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "11:00",
+      closes: "20:00",
+    },
+  ],
+  sameAs: ["https://www.instagram.com/indriyajewels/"],
+};
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -98,6 +154,14 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
           dateModified: "2026-10-26",
           mainEntityOfPage: CANONICAL,
         }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(websiteSchema),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(localBusinessSchema),
       },
     ],
   }),
@@ -627,6 +691,14 @@ function VaralakshmiPage() {
             </Link>
             .
           </p>
+          <address className="mt-6 not-italic leading-relaxed text-muted-foreground">
+            <strong className="text-primary">Indriya</strong>
+            <br />
+            {STORE_ADDRESS.street}, {STORE_ADDRESS.city}, {STORE_ADDRESS.region}{" "}
+            {STORE_ADDRESS.postalCode}, India
+            <br />
+            {STORE_HOURS_LABEL}
+          </address>
         </section>
       </main>
 
