@@ -3,4 +3,4 @@
 - [x] Add the linked Temple Jewellery Guide with author, date, context, motifs and care.
 - [x] Verify desktop/mobile navigation, FAQs, metadata and project checks; do not publish.
 - [x] Replace the bottom "Varalakshmi Vratham Jewellery FAQs" answers with the supplied bridal brief.
-- [ ] Add a seven-second review carousel — blocked: the supplied Google search has no five verifiable Indriya customer reviews; awaiting direct review links or screenshots.
+- [ ] Add and verify a seven-second review carousel using five screenshot-sourced reviews with their actual mixed ratings.

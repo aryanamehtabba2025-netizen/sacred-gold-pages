@@ -12,3 +12,4 @@
 ## Content architecture
 - Keep the assignment's temple-jewellery FAQs in one browser-safe data module, used by the landing page and its FAQPage JSON-LD, so visible answers and structured data remain identical.
 - The educational guide is a separate crawlable TanStack content route with leaf metadata and internal links; reuse existing design tokens and imagery to preserve the site's visual identity.
+- Keep screenshot-sourced review data in a browser-safe module and rotation in a separate accessible component; avoid adding unverified aggregate or review structured data.
