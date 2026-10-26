@@ -127,6 +127,10 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
       { property: "article:published_time", content: "2026-10-26" },
       { property: "article:modified_time", content: "2026-10-26" },
       { property: "article:author", content: "Aryan Mehta" },
+      { name: "author", content: "Aryan Mehta" },
+      { name: "date", content: "2026-10-26" },
+      { name: "datePublished", content: "2026-10-26" },
+      { name: "dateModified", content: "2026-10-26" },
     ],
     links: [{ rel: "canonical", href: CANONICAL }],
     scripts: [
@@ -153,7 +157,7 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
           "@type": "Article",
           headline: TITLE,
           description: DESCRIPTION,
-          author: { "@type": "Person", name: "Aryan Mehta" },
+          author: { "@type": "Person", name: "Aryan Mehta", url: "https://sacred-gold-pages.lovable.app/about#author", description: "SYBBA Marketing Major; student author" },
           publisher: { "@type": "Organization", name: "Indriya" },
           datePublished: "2026-10-26",
           dateModified: "2026-10-26",
@@ -219,18 +223,18 @@ const categories = [
 const trustCards = [
   {
     icon: BadgeCheck,
-    title: "BIS Hallmarked Gold",
-    copy: "Every piece is described with its gold purity and hallmark details.",
+    title: "Check Product Details",
+    copy: "Verify materials, purity and any hallmark information in the current official listing.",
   },
   {
     icon: Gem,
-    title: "Transparent Pricing",
-    copy: "Metal rate, making and applicable charges shown clearly before you buy.",
+    title: "Compare Current Prices",
+    copy: "Ask for an itemised quote including making charges and applicable taxes before purchasing.",
   },
   {
     icon: Repeat,
-    title: "Lifetime Exchange",
-    copy: "Exchange your jewellery as tastes and occasions change, per policy terms.",
+    title: "Read Official Policies",
+    copy: "Confirm the current purchase and exchange terms with Indriya; this demo provides no guarantee.",
   },
 ];
 
@@ -322,9 +326,9 @@ function VaralakshmiPage() {
             <h1 className="mt-4 max-w-xl text-[2.6rem] leading-[1.06] text-ivory sm:text-5xl lg:text-6xl">
               Varalakshmi Vratham Gold Jewellery
             </h1>
-            <p className="mt-4 flex items-center gap-2 text-sm text-ivory/70">
+            <p className="mt-4 flex flex-wrap items-center gap-2 text-sm text-ivory/70">
               <CalendarDays aria-hidden="true" className="h-4 w-4 text-gold-soft" />
-              By Aryan Mehta · Published <time dateTime="2026-10-26">26 October 2026</time>
+              By Aryan Mehta · SYBBA Marketing Major · Published: <time dateTime="2026-10-26">October 26, 2026</time>
             </p>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-ivory/85 lg:text-lg">
               Celebrate the sacred season with temple-inspired gold jewellery that honours devotion,
@@ -356,11 +360,11 @@ function VaralakshmiPage() {
         <section className="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-24">
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
           <p className="mt-10 text-lg leading-relaxed text-foreground lg:text-xl">
-            In many South Indian homes, the search for Varalakshmi Vratham gold jewellery begins
-            long before the kalasham is dressed. A necklace is taken out of its pouch, a bangle is
-            tried against a new silk saree, and a daughter is told which piece was worn by her
-            grandmother on the same morning. Gold becomes part of the ritual itself — quiet,
-            deliberate, and full of memory.
+            Varalakshmi Vratham gold jewellery refers to gold jewellery chosen for the festival;
+            temple jewellery describes a motif-led design tradition, not a specification of metal
+            purity. For a festive look, compare the necklace scale, motifs and fit with your saree
+            and existing pieces. Check current official product listings for prices, materials,
+            purity and availability.
           </p>
           <p className="mt-6 leading-relaxed text-muted-foreground">
             Gold has long been chosen for sacred celebrations because it carries more than beauty.
@@ -379,9 +383,9 @@ function VaralakshmiPage() {
             aarti, the visits, and every year it is brought out again.
           </p>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            This guide is written from our styling team's first-hand experience helping families
-            choose jewellery for Vratham mornings, weddings, and festive visits — what to wear, how
-            to layer it, and how to care for each piece so it lasts for the next generation.
+            Our original work here is an educational comparison checklist and a transcription of
+            supplied customer review screenshots. This source-based guide does not claim store
+            visits, staff interviews or professional jewellery expertise.
           </p>
           <address className="mt-10 rounded-xl border border-border bg-secondary/50 p-6 not-italic">
             <p className="text-sm font-medium text-foreground">
@@ -392,9 +396,8 @@ function VaralakshmiPage() {
               <time dateTime="2026-10-26">26 October 2026</time>
             </p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Aryan Mehta prepared this guide as an educational project on Indian jewellery retail,
-              drawing on first-hand research of Indriya's publicly available collections and styling
-              guidance. It is a student assignment demo, not commercial advice.
+              Author credentials: Aryan Mehta is an SYBBA Marketing Major. This is a student
+              assignment, not professional jewellery advice. <Link to="/about" className="text-primary underline underline-offset-4">About the author and research method</Link>.
             </p>
           </address>
         </section>
@@ -507,8 +510,7 @@ function VaralakshmiPage() {
               ))}
             </div>
             <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
-              Editable placeholder: these three assurances are to be reviewed and confirmed by the
-              Indriya brand team against live policy before publishing.
+              These are purchasing checks, not certifications or promises. Read the <a href="https://www.indriya.com/terms-and-conditions" className="text-primary underline underline-offset-4">official terms and conditions</a> before purchasing.
             </p>
           </div>
         </section>
@@ -707,9 +709,10 @@ function VaralakshmiPage() {
             Sources &amp; Further Reading
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            This guide references the following sources. According to Indriya's published collection
-            pages and our own Temple Jewellery Guide, the motifs and care practices described here
-            reflect widely shared tradition rather than a single maker's claims.
+            Source note: Indriya's official collection page is the primary source for current
+            product details. Our Temple Jewellery Guide is a separate student-written explanation,
+            not independent verification of the brand. Product-specific claims should be checked
+            against the original listing and official policies.
           </p>
           <ul className="mt-6 list-disc space-y-2 pl-6 text-sm leading-relaxed text-muted-foreground">
             <li>
@@ -740,6 +743,7 @@ function VaralakshmiPage() {
               — policies on purchases, exchange, and pricing.
             </li>
           </ul>
+          <p className="mt-6 text-sm text-muted-foreground"><Link to="/about" className="text-primary underline underline-offset-4">About this guide</Link> · <Link to="/press" className="text-primary underline underline-offset-4">Press &amp; source references</Link> · <a href="https://www.google.com/maps/search/?api=1&query=Indriya+Aditya+Birla+Jewellery+Borivali+West+Mumbai" className="text-primary underline underline-offset-4">Find the reviewed Borivali store on Google Maps</a></p>
           <p className="mt-8 leading-relaxed text-muted-foreground">
             Questions about a specific piece? Call us at{" "}
             <a
@@ -824,7 +828,8 @@ function VaralakshmiPage() {
                 { label: "Temple Jewellery", href: "https://www.indriya.com/temple-jewellery" },
                 { label: "Weddings", href: "https://www.indriya.com/wedding" },
                 { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
-                { label: "About Indriya", href: "https://www.indriya.com" },
+                { label: "About", href: "/about" },
+                { label: "Press & Media", href: "/press" },
                 { label: "Contact", href: "/contact" },
                 { label: "Policies", href: "https://www.indriya.com/terms-and-conditions" },
               ].map((l) => (
