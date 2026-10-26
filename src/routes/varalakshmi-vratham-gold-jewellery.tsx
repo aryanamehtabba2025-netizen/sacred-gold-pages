@@ -314,6 +314,20 @@ function VaralakshmiPage() {
             choose jewellery for Vratham mornings, weddings, and festive visits — what to wear, how
             to layer it, and how to care for each piece so it lasts for the next generation.
           </p>
+          <address className="mt-10 rounded-xl border border-border bg-secondary/50 p-6 not-italic">
+            <p className="text-sm font-medium text-foreground">
+              Written by <span className="text-primary">Aryan Mehta</span>
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Published <time dateTime="2026-10-26">26 October 2026</time> · Last updated{" "}
+              <time dateTime="2026-10-26">26 October 2026</time>
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Aryan Mehta prepared this guide as an educational project on Indian jewellery
+              retail, drawing on first-hand research of Indriya's publicly available collections
+              and styling guidance. It is a student assignment demo, not commercial advice.
+            </p>
+          </address>
         </section>
 
         {/* Collection */}
@@ -553,6 +567,58 @@ function VaralakshmiPage() {
             </Accordion>
           </div>
         </section>
+
+        {/* Sources & contact */}
+        <section
+          aria-labelledby="sources-heading"
+          className="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-20"
+        >
+          <h2 id="sources-heading" className="text-2xl text-primary lg:text-3xl">
+            Sources &amp; Further Reading
+          </h2>
+          <p className="mt-4 leading-relaxed text-muted-foreground">
+            This guide references the following sources. According to Indriya's published
+            collection pages and our own Temple Jewellery Guide, the motifs and care practices
+            described here reflect widely shared tradition rather than a single maker's claims.
+          </p>
+          <ul className="mt-6 list-disc space-y-2 pl-6 text-sm leading-relaxed text-muted-foreground">
+            <li>
+              <Link to="/temple-jewellery-guide" className="text-primary underline underline-offset-4 hover:text-gold">
+                Indriya Temple Jewellery Guide
+              </Link>{" "}
+              — definitions, motifs, and care guidance by Aryan Mehta (19 October 2026).
+            </li>
+            <li>
+              <a
+                href="https://www.indriya.com/temple-jewellery"
+                className="text-primary underline underline-offset-4 hover:text-gold"
+              >
+                Indriya Temple Jewellery Collection
+              </a>{" "}
+              — current designs and product details.
+            </li>
+            <li>
+              <a
+                href="https://www.indriya.com/terms-and-conditions"
+                className="text-primary underline underline-offset-4 hover:text-gold"
+              >
+                Indriya Terms &amp; Conditions
+              </a>{" "}
+              — policies on purchases, exchange, and pricing.
+            </li>
+          </ul>
+          <p className="mt-8 leading-relaxed text-muted-foreground">
+            Questions about a specific piece? Call us at{" "}
+            <a href="tel:+919920792272" className="text-primary underline underline-offset-4 hover:text-gold">
+              9920792272
+            </a>{" "}
+            or visit our{" "}
+            <Link to="/contact" className="text-primary underline underline-offset-4 hover:text-gold">
+              contact page
+            </Link>
+            .
+          </p>
+        </section>
       </main>
 
       {/* Footer */}
@@ -573,7 +639,7 @@ function VaralakshmiPage() {
             className="mt-8 inline-flex w-fit items-center gap-2.5 rounded-full border border-gold-soft/50 px-5 py-2.5 text-sm text-ivory transition-all hover:border-gold-soft hover:bg-gold-soft/10 hover:text-gold-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-soft"
           >
             <Instagram aria-hidden="true" className="h-5 w-5" />
-            Follow us on Instagram
+            Follow us on Instagram · instagram.com/indriyajewels
           </a>
           <nav aria-label="Footer" className="mt-8">
             <ul className="grid gap-4 text-sm sm:grid-cols-3 lg:grid-cols-4">
@@ -583,6 +649,7 @@ function VaralakshmiPage() {
                 { label: "Temple Jewellery", href: "https://www.indriya.com/temple-jewellery" },
                 { label: "Weddings", href: "https://www.indriya.com/wedding" },
                 { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
+                { label: "About Indriya", href: "https://www.indriya.com" },
                 { label: "Contact", href: "/contact" },
                 { label: "Policies", href: "https://www.indriya.com/terms-and-conditions" },
               ].map((l) => (

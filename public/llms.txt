@@ -1,0 +1,16 @@
+# Indriya
+
+> Indriya is a luxury Indian jewellery brand; this site is an educational demo guide to Varalakshmi Vratham gold jewellery and temple jewellery traditions, written by Aryan Mehta and published 26 October 2026.
+
+This site explains temple jewellery motifs (Lakshmi, peacock, lotus), styling for South Indian bridal and festive occasions, and practical jewellery care. It is a student assignment demo: it makes no claims about product availability, pricing, purity, or certifications. For current product details, visit the linked Indriya collection pages.
+
+## Pages
+
+- [Varalakshmi Vratham Gold Jewellery](/varalakshmi-vratham-gold-jewellery): Landing guide with festive jewellery categories, craftsmanship notes, and FAQs.
+- [Temple Jewellery Guide](/temple-jewellery-guide): Educational article on temple jewellery history, motifs, styling, and care.
+- [Contact](/contact): How to reach the team.
+
+## Optional
+
+- [Indriya Temple Jewellery Collection](https://www.indriya.com/temple-jewellery): External brand collection page referenced as a source.
+- [Indriya Terms & Conditions](https://www.indriya.com/terms-and-conditions): External policy page referenced as a source.
