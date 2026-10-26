@@ -539,6 +539,29 @@ function VaralakshmiPage() {
           </ul>
         </section>
 
+        {/* Coursework feedback examples */}
+        <section className="border-y border-border bg-secondary/40 py-16 lg:py-20" aria-labelledby="sample-feedback-heading">
+          <div className="mx-auto max-w-6xl px-5 lg:px-8">
+            <p className="eyebrow">Coursework demonstration</p>
+            <h2 id="sample-feedback-heading" className="mt-3 text-3xl text-primary lg:text-4xl">Illustrative feedback examples</h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Fictional examples created for an SEO/SEM coursework presentation. These are not customer reviews or endorsements.</p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              <figure className="border border-border bg-card p-6">
+                <blockquote className="text-base leading-relaxed text-foreground">“The jewellery categories are easy to browse.”</blockquote>
+                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">Example visitor 1 · Fictional</figcaption>
+              </figure>
+              <figure className="border border-border bg-card p-6">
+                <blockquote className="text-base leading-relaxed text-foreground">“The temple jewellery descriptions help explain the designs.”</blockquote>
+                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">Example visitor 2 · Fictional</figcaption>
+              </figure>
+              <figure className="border border-border bg-card p-6">
+                <blockquote className="text-base leading-relaxed text-foreground">“The FAQ answers common bridal jewellery questions clearly.”</blockquote>
+                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">Example visitor 3 · Fictional</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section
           id="bridal-jewellery-faqs"
