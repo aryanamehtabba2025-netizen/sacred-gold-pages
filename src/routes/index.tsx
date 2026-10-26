@@ -3,13 +3,13 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Indriya | Sacred Celebrations & Temple Jewellery" },
+      { title: "Indriya Temple Jewellery | Student Concept" },
       {
         name: "description",
         content:
-          "Explore Indriya’s Varalakshmi Vratham jewellery page and educational temple jewellery guide.",
+          "Explore an independent student concept on Varalakshmi Vratham and temple jewellery.",
       },
-      { property: "og:title", content: "Indriya | Sacred Celebrations & Temple Jewellery" },
+      { property: "og:title", content: "Indriya Temple Jewellery | Student Concept" },
       {
         property: "og:description",
         content: "Discover temple-inspired adornment and guidance for sacred celebrations.",
