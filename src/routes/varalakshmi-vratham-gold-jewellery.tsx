@@ -323,9 +323,9 @@ function VaralakshmiPage() {
               <time dateTime="2026-10-26">26 October 2026</time>
             </p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Aryan Mehta prepared this guide as an educational project on Indian jewellery
-              retail, drawing on first-hand research of Indriya's publicly available collections
-              and styling guidance. It is a student assignment demo, not commercial advice.
+              Aryan Mehta prepared this guide as an educational project on Indian jewellery retail,
+              drawing on first-hand research of Indriya's publicly available collections and styling
+              guidance. It is a student assignment demo, not commercial advice.
             </p>
           </address>
         </section>
@@ -577,13 +577,16 @@ function VaralakshmiPage() {
             Sources &amp; Further Reading
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            This guide references the following sources. According to Indriya's published
-            collection pages and our own Temple Jewellery Guide, the motifs and care practices
-            described here reflect widely shared tradition rather than a single maker's claims.
+            This guide references the following sources. According to Indriya's published collection
+            pages and our own Temple Jewellery Guide, the motifs and care practices described here
+            reflect widely shared tradition rather than a single maker's claims.
           </p>
           <ul className="mt-6 list-disc space-y-2 pl-6 text-sm leading-relaxed text-muted-foreground">
             <li>
-              <Link to="/temple-jewellery-guide" className="text-primary underline underline-offset-4 hover:text-gold">
+              <Link
+                to="/temple-jewellery-guide"
+                className="text-primary underline underline-offset-4 hover:text-gold"
+              >
                 Indriya Temple Jewellery Guide
               </Link>{" "}
               — definitions, motifs, and care guidance by Aryan Mehta (19 October 2026).
@@ -609,11 +612,17 @@ function VaralakshmiPage() {
           </ul>
           <p className="mt-8 leading-relaxed text-muted-foreground">
             Questions about a specific piece? Call us at{" "}
-            <a href="tel:+919920792272" className="text-primary underline underline-offset-4 hover:text-gold">
+            <a
+              href="tel:+919920792272"
+              className="text-primary underline underline-offset-4 hover:text-gold"
+            >
               9920792272
             </a>{" "}
             or visit our{" "}
-            <Link to="/contact" className="text-primary underline underline-offset-4 hover:text-gold">
+            <Link
+              to="/contact"
+              className="text-primary underline underline-offset-4 hover:text-gold"
+            >
               contact page
             </Link>
             .
