@@ -56,12 +56,20 @@ export function CustomerReviews() {
             className="grid min-h-[440px] content-start justify-items-center text-center sm:min-h-[310px]"
           >
             <Quote aria-hidden="true" className="h-8 w-8 text-accent" strokeWidth={1.2} />
-            <div className="mt-5 flex gap-1" role="img" aria-label={`${review.rating} out of 5 stars`}>
+            <div
+              className="mt-5 flex gap-1"
+              role="img"
+              aria-label={`${review.rating} out of 5 stars`}
+            >
               {Array.from({ length: 5 }, (_, star) => (
                 <Star
                   key={star}
                   aria-hidden="true"
-                  className={star < review.rating ? "h-4 w-4 fill-accent text-accent" : "h-4 w-4 text-muted-foreground"}
+                  className={
+                    star < review.rating
+                      ? "h-4 w-4 fill-accent text-accent"
+                      : "h-4 w-4 text-muted-foreground"
+                  }
                 />
               ))}
             </div>
@@ -69,19 +77,39 @@ export function CustomerReviews() {
               <p>“{review.text}”</p>
             </blockquote>
             <p className="mt-6 font-medium text-primary">{review.name}</p>
-            <p className="mt-1 text-xs text-muted-foreground">{review.date} · As shown in screenshot</p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              {review.date} · As shown in screenshot
+            </p>
           </div>
           <div className="mt-6 flex items-center justify-center gap-3 border-t border-border pt-6">
-            <Button variant="outline" size="icon" aria-label="Previous review" title="Previous review" onClick={() => move(-1)}>
+            <Button
+              variant="outline"
+              size="icon"
+              aria-label="Previous review"
+              title="Previous review"
+              onClick={() => move(-1)}
+            >
               <ArrowLeft aria-hidden="true" />
             </Button>
             <span className="w-12 text-center text-sm tabular-nums text-muted-foreground">
               {index + 1} / {customerReviews.length}
             </span>
-            <Button variant="outline" size="icon" aria-label="Next review" title="Next review" onClick={() => move(1)}>
+            <Button
+              variant="outline"
+              size="icon"
+              aria-label="Next review"
+              title="Next review"
+              onClick={() => move(1)}
+            >
               <ArrowRight aria-hidden="true" />
             </Button>
-            <Button variant="outline" size="icon" aria-label={paused ? "Resume review rotation" : "Pause review rotation"} title={paused ? "Resume review rotation" : "Pause review rotation"} onClick={() => setPaused((current) => !current)}>
+            <Button
+              variant="outline"
+              size="icon"
+              aria-label={paused ? "Resume review rotation" : "Pause review rotation"}
+              title={paused ? "Resume review rotation" : "Pause review rotation"}
+              onClick={() => setPaused((current) => !current)}
+            >
               {paused ? <Play aria-hidden="true" /> : <Pause aria-hidden="true" />}
             </Button>
           </div>
