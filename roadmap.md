@@ -4,3 +4,5 @@
 - [x] Verify desktop/mobile navigation, FAQs, metadata and project checks; do not publish.
 - [x] Replace the bottom "Varalakshmi Vratham Jewellery FAQs" answers with the supplied bridal brief.
 - [x] Add and verify a seven-second review carousel using five screenshot-sourced reviews with their actual mixed ratings.
+- [ ] Improve ClayHog author credentials, dates, citation clarity, internal About/press links, and verified brand/review sources.
+- [ ] Verify preview improvements; public ClayHog reassessment requires publishing, which has not been requested.
