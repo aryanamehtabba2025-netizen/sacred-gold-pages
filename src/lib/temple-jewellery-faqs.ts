@@ -9,7 +9,7 @@ export const templeJewelleryFaqs = [
   },
   {
     q: "How do you care for temple jewellery?",
-    a: "To care for temple jewellery, keep it dry and away from perfume, hairspray, and household chemicals. Wipe it gently with a soft, dry cloth, store pieces separately, and follow the maker’s instructions for the specific metal or finish.",
+    a: "Keep it dry and away from perfume, hairspray, and household chemicals; wipe gently with a soft dry cloth after wearing and store separately in a lined pouch or box. Follow the maker’s care instructions for the specific metal or finish.",
   },
   {
     q: "What motifs are common in temple jewellery?",

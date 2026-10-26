@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import logoAsset from "@/assets/indriya-logo.png.asset.json";
 import craftImg from "@/assets/craft-detail.jpg";
 
-const TITLE = "Temple Jewellery Guide | Student Concept";
+const TITLE = "Temple Jewellery Guide | Indriya";
 const DESCRIPTION =
   "Explore temple jewellery’s cultural context, Lakshmi, peacock and lotus motifs, bridal styling and practical care in this guide by Aryan Mehta.";
-const URL =
-  "https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/temple-jewellery-guide/";
+const URL = "https://sacred-gold-pages.lovable.app/temple-jewellery-guide";
 
 export const Route = createFileRoute("/temple-jewellery-guide")({
   head: () => ({
@@ -30,13 +30,7 @@ export const Route = createFileRoute("/temple-jewellery-guide")({
           headline: "Temple Jewellery Guide",
           description: DESCRIPTION,
           author: { "@type": "Person", name: "Aryan Mehta" },
-          publisher: {
-            "@type": "Person",
-            name: "Aryan Mehta",
-            description: "Student concept project; not an official Indriya store",
-          },
           datePublished: "2026-10-19",
-          dateModified: "2026-10-26",
           mainEntityOfPage: URL,
         }),
       },
@@ -57,12 +51,13 @@ function TempleJewelleryGuide() {
       <header className="border-b border-border/70 bg-background">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
           <Link to="/varalakshmi-vratham-gold-jewellery" aria-label="Indriya landing page">
-            <span className="font-serif text-2xl tracking-wide text-primary">
-              Indriya{" "}
-              <span className="block font-sans text-[10px] uppercase tracking-widest">
-                Student concept
-              </span>
-            </span>
+            <img
+              src={logoAsset.url}
+              alt="Indriya Aditya Birla Jewellery logo"
+              width={841}
+              height={650}
+              className="h-12 w-auto lg:h-14"
+            />
           </Link>
           <Button
             asChild
@@ -196,23 +191,6 @@ function TempleJewelleryGuide() {
                 If a fitting feels loose or a finish looks damaged, seek advice from the maker or a
                 qualified jewellery professional before wearing or cleaning it further.
               </p>
-            </section>
-            <section aria-labelledby="sources-heading">
-              <h2 id="sources-heading" className="text-3xl text-primary">
-                Sources
-              </h2>
-              <ul className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground">
-                <li>
-                  <a
-                    href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html"
-                    className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
-                  >
-                    Temple Jewellery of Nagercoil
-                  </a>{" "}
-                  — Government of India, Office of the Development Commissioner (Handicrafts).
-                  Background reading on the craft tradition; no text copied.
-                </li>
-              </ul>
             </section>
             <nav aria-label="Related reading" className="border-t border-border pt-8">
               <h2 className="text-2xl text-primary">Continue exploring</h2>

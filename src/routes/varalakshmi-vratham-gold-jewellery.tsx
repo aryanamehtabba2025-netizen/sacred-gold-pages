@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck, Gem, Repeat } from "lucide-react";
-import { bridalJewelleryFaqs } from "@/lib/bridal-jewellery-faqs";
 import { templeJewelleryFaqs } from "@/lib/temple-jewellery-faqs";
 
 import heroImg from "@/assets/hero-varalakshmi.jpg";
@@ -16,13 +15,13 @@ import banglesImg from "@/assets/cat-temple-bangles.jpg";
 import earringsImg from "@/assets/cat-bridal-earrings.jpg";
 import bridalSetImg from "@/assets/cat-bridal-sets.jpg";
 import craftImg from "@/assets/craft-detail.jpg";
+import logoAsset from "@/assets/indriya-logo.png.asset.json";
 import storeImg from "@/assets/store-consultation.jpg";
 
-const SITE_ROOT = "https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages";
-const CANONICAL = `${SITE_ROOT}/varalakshmi-vratham-gold-jewellery/`;
-const TITLE = "Varalakshmi Vratham Gold Jewellery | Student Concept Guide";
+const CANONICAL = "https://www.indriya.com/varalakshmi-vratham-gold-jewellery";
+const TITLE = "Varalakshmi Vratham Gold Jewellery | Indriya";
 const DESCRIPTION =
-  "An independent student guide to Varalakshmi Vratham gold jewellery, temple motifs, bridal styling, and verified Indriya links.";
+  "Discover Varalakshmi Vratham gold jewellery by Indriya, from Lakshmi necklaces and temple bangles to antique earrings for sacred celebrations.";
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -32,13 +31,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: `${SITE_ROOT}/`,
+      item: "https://www.indriya.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "Temple Jewellery Guide",
-      item: `${SITE_ROOT}/temple-jewellery-guide/`,
+      name: "Temple Jewellery",
+      item: "https://www.indriya.com/temple-jewellery",
     },
     {
       "@type": "ListItem",
@@ -47,44 +46,6 @@ const breadcrumbSchema = {
       item: CANONICAL,
     },
   ],
-};
-
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: TITLE,
-  description: DESCRIPTION,
-  url: CANONICAL,
-  author: { "@type": "Person", name: "Aryan Mehta", url: `${SITE_ROOT}/about/` },
-  about: {
-    "@type": "Organization",
-    name: "Indriya",
-    url: "https://www.indriya.com/",
-    description: "Official jewellery brand discussed by this independent student concept page",
-  },
-  publisher: {
-    "@type": "Person",
-    name: "Aryan Mehta",
-    description: "Student concept project; not an official Indriya store",
-  },
-  datePublished: "2026-10-26",
-  dateModified: "2026-10-26",
-};
-
-const webSiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Indriya Temple Jewellery (Student Concept Project)",
-  url: `${SITE_ROOT}/`,
-  description:
-    "A student concept page about temple-inspired gold jewellery; not an official Indriya store.",
-  inLanguage: "en",
-  publisher: {
-    "@type": "Person",
-    name: "Aryan Mehta",
-    description: "Student concept project; not an official Indriya store",
-    url: `${SITE_ROOT}/about/`,
-  },
 };
 
 export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
@@ -97,8 +58,6 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "article" },
       { property: "og:url", content: CANONICAL },
-      { property: "article:published_time", content: "2026-10-26" },
-      { property: "article:modified_time", content: "2026-10-26" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
@@ -114,20 +73,12 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: [...bridalJewelleryFaqs, ...templeJewelleryFaqs].map(({ q, a }) => ({
+          mainEntity: templeJewelleryFaqs.map(({ q, a }) => ({
             "@type": "Question",
             name: q,
             acceptedAnswer: { "@type": "Answer", text: a },
           })),
         }),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(webPageSchema),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(webSiteSchema),
       },
     ],
   }),
@@ -147,7 +98,7 @@ const categories = [
     title: "Antique Lakshmi Necklaces",
     image: necklaceImg,
     alt: "Antique gold necklace with a Lakshmi motif pendant resting on ivory silk",
-    copy: "An antique Lakshmi necklace is a temple-jewellery style featuring the goddess motif, often paired with coin-like details. This image illustrates the design style, not a specific product for sale; check the official collection for actual materials and availability.",
+    copy: "An antique gold necklace centred on the goddess, finished with kasu-inspired discs and a softly aged lustre made for pooja mornings.",
     cta: "View Necklaces",
     href: "https://www.indriya.com/jewellery/neckwear",
   },
@@ -155,7 +106,7 @@ const categories = [
     title: "Temple Jewellery Bangles",
     image: banglesImg,
     alt: "Close-up of temple jewellery bangles with intricate Lakshmi-inspired detailing",
-    copy: "Temple-style bangles can feature deity motifs and beaded borders. This is a design illustration, not a verified Indriya product; check the official listing for its material, size and price.",
+    copy: "Temple jewellery bangles carved with deities and beaded borders, designed to stack quietly or stand alone against silk.",
     cta: "View Bangles",
     href: "https://www.indriya.com/jewellery/bangles",
   },
@@ -163,7 +114,7 @@ const categories = [
     title: "Antique Bridal Earrings",
     image: earringsImg,
     alt: "Antique bridal earrings styled with a South Indian silk saree",
-    copy: "Jhumka and chandbali shapes are options for a traditional bridal look. Ask the seller about the actual weight, closure and material before choosing earrings for a long ceremony.",
+    copy: "Antique bridal earrings in jhumka and chandbali silhouettes, weighted for comfort through long ceremonies.",
     cta: "View Earrings",
     href: "https://www.indriya.com/jewellery/earrings",
   },
@@ -171,7 +122,7 @@ const categories = [
     title: "South Indian Bridal Jewellery Sets",
     image: bridalSetImg,
     alt: "Bride in an ivory silk saree wearing a complete set of South Indian bridal jewellery in antique gold",
-    copy: "A South Indian bridal set may combine a long haaram, a choker, earrings and a waist belt. Confirm which pieces are included in any actual set on the official seller's page.",
+    copy: "Complete south indian bridal jewellery sets — layered haaram, choker, belt and earrings — composed as one considered story.",
     cta: "View Bridal Sets",
     href: "https://www.indriya.com/wedding",
   },
@@ -180,18 +131,18 @@ const categories = [
 const trustCards = [
   {
     icon: BadgeCheck,
-    title: "Hallmarked Gold",
-    copy: "Indriya says its gold jewellery is BIS hallmarked. This student page does not certify any item; verify the hallmark and product details on Indriya's official site before buying.",
+    title: "BIS Hallmarked Gold",
+    copy: "Every piece is described with its gold purity and hallmark details.",
   },
   {
     icon: Gem,
-    title: "Pricing Information",
-    copy: "Indriya says it provides a price breakup for each piece. This page displays no live prices; check the official listing for the current metal value, making charges and other applicable costs.",
+    title: "Transparent Pricing",
+    copy: "Metal rate, making and applicable charges shown clearly before you buy.",
   },
   {
     icon: Repeat,
-    title: "Exchange Policy",
-    copy: "Indriya describes a lifetime exchange policy for eligible jewellery. Its terms can change; read the official policy and confirm eligibility for the exact piece before purchase.",
+    title: "Lifetime Exchange",
+    copy: "Exchange your jewellery as tastes and occasions change, per policy terms.",
   },
 ];
 
@@ -209,7 +160,7 @@ const faqs = [
   },
   {
     q: "How do I choose an antique Lakshmi necklace?",
-    a: "Start with length and neckline. A short choker sits well over a high-necked blouse, while a longer haaram suits a draped saree. Then consider the finish: matte antique gold reads traditional, polished gold reads brighter in photographs. For weights and lengths in person, contact the Indriya store team through the official website.",
+    a: "Start with length and neckline. A short choker sits well over a high-necked blouse, while a longer haaram suits a draped saree. Then consider the finish: matte antique gold reads traditional, polished gold reads brighter in photographs. Our store consultants can help you compare weights and lengths in person.",
   },
   {
     q: "Can temple jewellery be worn beyond festive occasions?",
@@ -234,14 +185,15 @@ function VaralakshmiPage() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
-          <Link to="/" aria-label="Indriya home" className="shrink-0">
-            <span className="font-serif text-2xl tracking-wide text-primary">
-              Indriya{" "}
-              <span className="block font-sans text-[10px] uppercase tracking-widest">
-                Student concept
-              </span>
-            </span>
-          </Link>
+          <a href="/" aria-label="Indriya home" className="shrink-0">
+            <img
+              src={logoAsset.url}
+              alt="Indriya Aditya Birla Jewellery logo"
+              width={841}
+              height={650}
+              className="h-12 w-auto lg:h-14"
+            />
+          </a>
           <nav aria-label="Primary" className="hidden lg:block">
             <ul className="flex items-center gap-8">
               {navLinks.map((l) => (
@@ -254,14 +206,6 @@ function VaralakshmiPage() {
                   </a>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/about"
-                  className="text-xs uppercase tracking-[0.14em] text-muted-foreground hover:text-primary"
-                >
-                  About
-                </Link>
-              </li>
             </ul>
           </nav>
           <Button
@@ -284,14 +228,6 @@ function VaralakshmiPage() {
                 </a>
               </li>
             ))}
-            <li className="shrink-0">
-              <Link
-                to="/about"
-                className="text-xs uppercase tracking-[0.14em] text-muted-foreground hover:text-primary"
-              >
-                About
-              </Link>
-            </li>
           </ul>
         </nav>
       </header>
@@ -346,20 +282,7 @@ function VaralakshmiPage() {
         {/* Intro copy */}
         <section className="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-24">
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
-          <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
-            By <span className="text-primary">Aryan Mehta</span> <span aria-hidden="true">·</span>{" "}
-            Published on <time dateTime="2026-10-26">26 October 2026</time>{" "}
-            <span aria-hidden="true">·</span> Updated{" "}
-            <time dateTime="2026-10-26">26 October 2026</time> <span aria-hidden="true">·</span>{" "}
-            Student concept page <span aria-hidden="true">·</span>{" "}
-            <Link
-              to="/about"
-              className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
-            >
-              About this page
-            </Link>
-          </p>
-          <p className="mt-6 text-lg leading-relaxed text-foreground lg:text-xl">
+          <p className="mt-10 text-lg leading-relaxed text-foreground lg:text-xl">
             In many South Indian homes, the search for Varalakshmi Vratham gold jewellery begins
             long before the kalasham is dressed. A necklace is taken out of its pouch, a bangle is
             tried against a new silk saree, and a daughter is told which piece was worn by her
@@ -375,9 +298,12 @@ function VaralakshmiPage() {
             these pieces feel less like accessories and more like offerings.
           </p>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            This student concept explores that intent through illustrative jewellery categories, not
-            product listings. For verified designs, materials, prices, and availability, follow the
-            links to Indriya’s official website.
+            At Indriya, our festive edit is built around that intent. There are pieces designed to
+            be the single statement of the morning, and lighter designs meant to be layered with
+            what you already own. Some are made for a first purchase after a wedding; others are
+            chosen with a daughter in mind, years ahead of the occasion she will wear them for.
+            Whichever you choose, the aim is the same — jewellery that holds its grace through the
+            aarti, the visits, and every year it is brought out again.
           </p>
         </section>
 
@@ -446,22 +372,17 @@ function VaralakshmiPage() {
                 Heritage in Every Detail
               </h2>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                Temple jewellery refers to jewellery influenced by South Indian temple art and craft
-                traditions. Common design motifs include deities, lotuses, peacocks and coin-like
-                details. The government craft reference below describes a regional temple-jewellery
-                tradition; it does not verify the origin or construction of the illustrative pieces
-                shown here.{" "}
-                <a
-                  href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html"
-                  className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
-                >
-                  Source: Govt. of India, DC Handicrafts
-                </a>
+                Our temple jewellery designs borrow from the grammar of South Indian shrines. A
+                seated Lakshmi is framed by an arch; lotus petals fan outward in layers; a peacock
+                turns its neck along the curve of a pendant. Kasu-inspired discs are strung so they
+                move and catch light as you do, and antique finishes are worked to look gently
+                lived-in rather than newly polished.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                For a temple-style necklace, compare the motif, metal and finish stated in the
-                actual product listing. Ask about weight, closure and care instructions before
-                buying. This page is a student design guide, not a maker's first-hand account.
+                In necklace temple jewellery especially, the detail sits close to the eye — beaded
+                rims, granulated texture, and nakkashi-style surface work as a design inspiration
+                behind the ornamentation. The result is jewellery meant to be looked at slowly, and
+                worn for decades.
               </p>
               <a
                 href="https://www.indriya.com/temple-jewellery"
@@ -480,7 +401,7 @@ function VaralakshmiPage() {
         >
           <div className="mx-auto max-w-6xl px-5 lg:px-8">
             <h2 id="trust-heading" className="text-center text-3xl text-primary lg:text-4xl">
-              What Indriya Says on Its Official Site
+              Crafted for a Legacy of Trust
             </h2>
             <div className="mt-12 grid gap-10 sm:grid-cols-3">
               {trustCards.map((t) => (
@@ -494,12 +415,8 @@ function VaralakshmiPage() {
               ))}
             </div>
             <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
-              These are summaries of Indriya’s published promises, not guarantees from this student
-              site. Check the current terms on the{" "}
-              <a href="https://www.indriya.com/" className="underline underline-offset-4">
-                official Indriya website
-              </a>
-              .
+              Editable placeholder: these three assurances are to be reviewed and confirmed by the
+              Indriya brand team against live policy before publishing.
             </p>
           </div>
         </section>
@@ -564,195 +481,7 @@ function VaralakshmiPage() {
           </ul>
         </section>
 
-        {/* Research and extractable comparison */}
-        <section
-          className="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20"
-          aria-labelledby="research-heading"
-        >
-          <p className="eyebrow">Research notes</p>
-          <h2 id="research-heading" className="mt-3 text-3xl text-primary lg:text-4xl">
-            Temple Jewellery at a Glance
-          </h2>
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            This is an educational guide by Aryan Mehta, based on the cited Government of India
-            craft reference and links to Indriya’s official pages. It is not an official store or a
-            product catalogue.
-          </p>
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            For this coursework project, I compared jewellery questions from Google search with
-            published craft information and Indriya’s own product and policy pages. I edited the
-            resulting answers into short, independently readable summaries. I have not handled or
-            tested the illustrated pieces. If you spot an error, you can contact me through the
-            project’s{" "}
-            <a
-              className="underline underline-offset-4"
-              href="https://github.com/aryanamehtabba2025-netizen/sacred-gold-pages/issues"
-            >
-              public GitHub issues page
-            </a>
-            ; please do not post personal details there.
-          </p>
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            Author credentials: Aryan Mehta is the student researcher and editor of this guide, not
-            a jeweller, gemmologist or Indriya employee. For questions or corrections, email{" "}
-            <a className="underline underline-offset-4" href="mailto:7aryanmehta@gmail.com">
-              7aryanmehta@gmail.com
-            </a>
-            .
-          </p>
-          <div className="mt-8 overflow-x-auto border border-border">
-            <table className="w-full min-w-[600px] border-collapse text-left text-sm">
-              <caption className="bg-secondary px-5 py-4 text-left text-base text-primary">
-                Common design elements and practical selection notes
-              </caption>
-              <thead className="bg-secondary/60 text-primary">
-                <tr>
-                  <th scope="col" className="border-b border-border px-5 py-4">
-                    Element
-                  </th>
-                  <th scope="col" className="border-b border-border px-5 py-4">
-                    Appearance
-                  </th>
-                  <th scope="col" className="border-b border-border px-5 py-4">
-                    What to check
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border text-muted-foreground">
-                <tr>
-                  <th scope="row" className="px-5 py-4 font-medium text-primary">
-                    Lakshmi motif
-                  </th>
-                  <td className="px-5 py-4">
-                    A deity figure used in temple-inspired ornamentation.
-                  </td>
-                  <td className="px-5 py-4">
-                    Look at motif detail, size, and how the pendant sits with the neckline.
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" className="px-5 py-4 font-medium text-primary">
-                    Peacock motif
-                  </th>
-                  <td className="px-5 py-4">Curved bird forms and feather-like patterning.</td>
-                  <td className="px-5 py-4">Check whether raised details catch on fabric.</td>
-                </tr>
-                <tr>
-                  <th scope="row" className="px-5 py-4 font-medium text-primary">
-                    Lotus motif
-                  </th>
-                  <td className="px-5 py-4">
-                    Petal shapes framing a figure or repeating along an ornament.
-                  </td>
-                  <td className="px-5 py-4">
-                    Compare scale and finish with other jewellery pieces.
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" className="px-5 py-4 font-medium text-primary">
-                    Kasu-inspired discs
-                  </th>
-                  <td className="px-5 py-4">
-                    Small coin-like elements used in some necklace designs.
-                  </td>
-                  <td className="px-5 py-4">
-                    Check movement, weight, and secure links before wearing.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-            Cultural background:{" "}
-            <a
-              className="underline underline-offset-4"
-              href="https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Jewellery/Temple_Jewellery_of_Nagercoil/TempleJewelleryofNagercoilWebPage.html"
-            >
-              Government of India, Temple Jewellery of Nagercoil
-            </a>
-            . Selection notes are general guidance, not product specifications.
-          </p>
-          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-            Official brand links (external):{" "}
-            <a className="underline underline-offset-4" href="https://www.indriya.com/">
-              Indriya website
-            </a>{" "}
-            ·{" "}
-            <a
-              className="underline underline-offset-4"
-              href="https://www.adityabirla.com/en/businesses/companies/indriya"
-            >
-              Aditya Birla Group’s Indriya page
-            </a>
-            . These belong to the brand, not to this unaffiliated coursework site.
-          </p>
-        </section>
-
-        {/* Coursework feedback examples */}
-        <section
-          className="border-y border-border bg-secondary/40 py-16 lg:py-20"
-          aria-labelledby="sample-feedback-heading"
-        >
-          <div className="mx-auto max-w-6xl px-5 lg:px-8">
-            <p className="eyebrow">Coursework demonstration</p>
-            <h2 id="sample-feedback-heading" className="mt-3 text-3xl text-primary lg:text-4xl">
-              Illustrative feedback examples
-            </h2>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Fictional examples created for an SEO/SEM coursework presentation. These are not
-              customer reviews or endorsements.
-            </p>
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
-              <figure className="border border-border bg-card p-6">
-                <blockquote className="text-base leading-relaxed text-foreground">
-                  “The jewellery categories are easy to browse.”
-                </blockquote>
-                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                  Example visitor 1 · Fictional
-                </figcaption>
-              </figure>
-              <figure className="border border-border bg-card p-6">
-                <blockquote className="text-base leading-relaxed text-foreground">
-                  “The temple jewellery descriptions help explain the designs.”
-                </blockquote>
-                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                  Example visitor 2 · Fictional
-                </figcaption>
-              </figure>
-              <figure className="border border-border bg-card p-6">
-                <blockquote className="text-base leading-relaxed text-foreground">
-                  “The FAQ answers common bridal jewellery questions clearly.”
-                </blockquote>
-                <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                  Example visitor 3 · Fictional
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ */}
-        <section
-          id="bridal-jewellery-faqs"
-          className="border-y border-border bg-card py-16 lg:py-24"
-          aria-labelledby="bridal-faq-heading"
-        >
-          <div className="mx-auto max-w-3xl px-5 lg:px-8">
-            <p className="eyebrow">Questions</p>
-            <h2 id="bridal-faq-heading" className="mt-3 text-3xl text-primary lg:text-4xl">
-              Bridal Jewellery FAQs
-            </h2>
-            <div className="mt-8 divide-y divide-border">
-              {bridalJewelleryFaqs.map(({ q, a }) => (
-                <article key={q} className="py-6">
-                  <h3 className="text-xl text-primary">{q}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section
           id="temple-jewellery-faqs"
           className="bg-secondary/60 py-16 lg:py-24"
@@ -798,12 +527,14 @@ function VaralakshmiPage() {
       {/* Footer */}
       <footer className="bg-maroon-deep text-ivory">
         <div className="mx-auto max-w-6xl px-5 py-14 lg:px-8">
-          <span className="font-serif text-3xl tracking-wide text-ivory">
-            Indriya{" "}
-            <span className="block font-sans text-[10px] uppercase tracking-widest">
-              Student concept
-            </span>
-          </span>
+          <img
+            src={logoAsset.url}
+            alt="Indriya Aditya Birla Jewellery logo"
+            width={841}
+            height={650}
+            loading="lazy"
+            className="h-16 w-auto brightness-0 invert"
+          />
           <nav aria-label="Footer" className="mt-8">
             <ul className="grid gap-4 text-sm sm:grid-cols-3 lg:grid-cols-4">
               {[
@@ -812,12 +543,7 @@ function VaralakshmiPage() {
                 { label: "Temple Jewellery", href: "https://www.indriya.com/temple-jewellery" },
                 { label: "Weddings", href: "https://www.indriya.com/wedding" },
                 { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
-                { label: "Contact", href: `${import.meta.env.BASE_URL}contact/` },
-                { label: "About this page", href: `${import.meta.env.BASE_URL}about/` },
-                {
-                  label: "Student project source",
-                  href: "https://github.com/aryanamehtabba2025-netizen/sacred-gold-pages",
-                },
+                { label: "Contact", href: "/contact" },
                 { label: "Policies", href: "https://www.indriya.com/terms-and-conditions" },
               ].map((l) => (
                 <li key={l.label}>
@@ -832,8 +558,8 @@ function VaralakshmiPage() {
             </ul>
           </nav>
           <p className="mt-10 text-xs text-ivory/60">
-            Student concept project by Aryan Mehta. Not affiliated with Indriya. Imagery is
-            representational; no products are sold on this site.
+            &copy; {new Date().getFullYear()} Indriya. Imagery is representational. Student
+            assignment demo; no product availability or guarantees are asserted.
           </p>
         </div>
       </footer>

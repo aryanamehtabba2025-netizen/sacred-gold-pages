@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import logoAsset from "@/assets/indriya-logo.png.asset.json";
 
-const CANONICAL = "https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/contact/";
-const TITLE = "Contact the Creator | Indriya Student Concept";
+const CANONICAL = "https://www.indriya.com/contact";
+const TITLE = "Contact Indriya | Talk to Our Jewellery Team";
 const DESCRIPTION =
-  "Contact the creator of this independent student concept page, or visit the official Indriya website for product enquiries.";
+  "Get in touch with Indriya for help with temple jewellery, gold necklaces, bangles and bridal sets. Call us on 9920792272.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -37,7 +38,6 @@ const links = [
     label: "Store Locator",
     href: "https://www.indriya.com/jewellery-stores",
   },
-  { label: "About this page", href: `${import.meta.env.BASE_URL}about/` },
   {
     label: "Policies",
     href: "https://www.indriya.com/terms-and-conditions",
@@ -49,14 +49,15 @@ function ContactPage() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border/70">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
-          <Link to="/" aria-label="Indriya home">
-            <span className="font-serif text-2xl tracking-wide text-primary">
-              Indriya{" "}
-              <span className="block font-sans text-[10px] uppercase tracking-widest">
-                Student concept
-              </span>
-            </span>
-          </Link>
+          <a href="/" aria-label="Indriya home">
+            <img
+              src={logoAsset.url}
+              alt="Indriya Aditya Birla Jewellery logo"
+              width={841}
+              height={650}
+              className="h-12 w-auto lg:h-14"
+            />
+          </a>
           <Button
             asChild
             variant="outline"
@@ -68,33 +69,25 @@ function ContactPage() {
       </header>
 
       <main className="mx-auto max-w-3xl px-5 py-20 lg:px-8 lg:py-28">
-        <p className="eyebrow">Student project</p>
-        <h1 className="mt-4 text-4xl text-primary lg:text-5xl">Contact the Creator</h1>
+        <p className="eyebrow">Contact</p>
+        <h1 className="mt-4 text-4xl text-primary lg:text-5xl">Contact Us</h1>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-          This is an independent educational concept page by Aryan Mehta, not an official Indriya
-          store or customer-service channel.
-        </p>
-        <p className="mt-4 leading-relaxed text-muted-foreground">
-          For questions or corrections about this student project, email{" "}
-          <a className="underline underline-offset-4" href="mailto:7aryanmehta@gmail.com">
-            7aryanmehta@gmail.com
-          </a>
-          . Aryan is the student author, not a jewellery professional or Indriya representative. You
-          can also open an issue in the public GitHub repository, but do not include private or
-          payment information in a public issue.
-        </p>
-        <Button asChild size="lg" className="mt-10 bg-gold text-maroon-deep hover:bg-gold-soft">
-          <a href="https://github.com/aryanamehtabba2025-netizen/sacred-gold-pages/issues">
-            Ask about this project on GitHub
-          </a>
-        </Button>
-        <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-          For real jewellery products, prices, appointments, or policies, visit the{" "}
-          <a className="underline underline-offset-4" href="https://www.indriya.com/">
-            official Indriya website
+          Feel free to contact us at{" "}
+          <a
+            href="tel:+919920792272"
+            className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
+          >
+            9920792272
           </a>
           .
         </p>
+        <p className="mt-4 leading-relaxed text-muted-foreground">
+          Our team is happy to help you with temple jewellery designs, antique gold necklaces,
+          bangles, earrings and bridal sets, or to arrange a boutique appointment.
+        </p>
+        <Button asChild size="lg" className="mt-10 bg-gold text-maroon-deep hover:bg-gold-soft">
+          <a href="tel:+919920792272">Call 9920792272</a>
+        </Button>
       </main>
 
       <footer className="bg-maroon-deep text-ivory">
@@ -113,9 +106,7 @@ function ContactPage() {
               ))}
             </ul>
           </nav>
-          <p className="mt-10 text-xs text-ivory/60">
-            Student concept page by Aryan Mehta; not affiliated with Indriya.
-          </p>
+          <p className="mt-10 text-xs text-ivory/60">&copy; {new Date().getFullYear()} Indriya.</p>
         </div>
       </footer>
     </div>
