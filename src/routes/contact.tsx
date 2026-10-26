@@ -1,6 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/indriya-logo.png.asset.json";
 
 const CANONICAL = "https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/contact/";
 const TITLE = "Contact the Creator | Indriya Student Concept";
@@ -38,7 +37,7 @@ const links = [
     label: "Store Locator",
     href: "https://www.indriya.com/jewellery-stores",
   },
-  { label: "About this page", href: "/about" },
+  { label: "About this page", href: `${import.meta.env.BASE_URL}about/` },
   {
     label: "Policies",
     href: "https://www.indriya.com/terms-and-conditions",
@@ -50,15 +49,14 @@ function ContactPage() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border/70">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
-          <a href="/" aria-label="Indriya home">
-            <img
-              src={logoAsset.url}
-              alt="Indriya Aditya Birla Jewellery logo"
-              width={841}
-              height={650}
-              className="h-12 w-auto lg:h-14"
-            />
-          </a>
+          <Link to="/" aria-label="Indriya home">
+            <span className="font-serif text-2xl tracking-wide text-primary">
+              Indriya{" "}
+              <span className="block font-sans text-[10px] uppercase tracking-widest">
+                Student concept
+              </span>
+            </span>
+          </Link>
           <Button
             asChild
             variant="outline"
@@ -73,16 +71,24 @@ function ContactPage() {
         <p className="eyebrow">Student project</p>
         <h1 className="mt-4 text-4xl text-primary lg:text-5xl">Contact the Creator</h1>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-          This is an independent educational concept page by Aryan Mehta, not an official Indriya store or customer-service channel.
+          This is an independent educational concept page by Aryan Mehta, not an official Indriya
+          store or customer-service channel.
         </p>
         <p className="mt-4 leading-relaxed text-muted-foreground">
-          To ask a question about the project, open an issue in its public GitHub repository. Do not include private or payment information in a public issue.
+          To ask a question about the project, open an issue in its public GitHub repository. Do not
+          include private or payment information in a public issue.
         </p>
         <Button asChild size="lg" className="mt-10 bg-gold text-maroon-deep hover:bg-gold-soft">
-          <a href="https://github.com/aryanamehtabba2025-netizen/sacred-gold-pages/issues">Ask about this project on GitHub</a>
+          <a href="https://github.com/aryanamehtabba2025-netizen/sacred-gold-pages/issues">
+            Ask about this project on GitHub
+          </a>
         </Button>
         <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-          For real jewellery products, prices, appointments, or policies, visit the <a className="underline underline-offset-4" href="https://www.indriya.com/">official Indriya website</a>.
+          For real jewellery products, prices, appointments, or policies, visit the{" "}
+          <a className="underline underline-offset-4" href="https://www.indriya.com/">
+            official Indriya website
+          </a>
+          .
         </p>
       </main>
 
@@ -102,7 +108,9 @@ function ContactPage() {
               ))}
             </ul>
           </nav>
-          <p className="mt-10 text-xs text-ivory/60">Student concept page by Aryan Mehta; not affiliated with Indriya.</p>
+          <p className="mt-10 text-xs text-ivory/60">
+            Student concept page by Aryan Mehta; not affiliated with Indriya.
+          </p>
         </div>
       </footer>
     </div>
