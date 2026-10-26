@@ -155,24 +155,6 @@ const exploreLinks = [
   { label: "Store Locator", href: "https://www.indriya.com/jewellery-stores" },
 ];
 
-const faqs = [
-  {
-    q: "What jewellery is traditionally worn for Varalakshmi Vratham?",
-    a: "Families usually choose gold pieces with temple motifs — a Lakshmi pendant or haaram, thick kada or carved bangles, jhumkas, and often a modest waist belt or vanki with a silk saree. Many households also bring out heirloom pieces for the day and pair them with one newer purchase.",
-  },
-  {
-    q: "How do I choose an antique Lakshmi necklace?",
-    a: "Start with length and neckline. A short choker sits well over a high-necked blouse, while a longer haaram suits a draped saree. Then consider the finish: matte antique gold reads traditional, polished gold reads brighter in photographs. Our store consultants can help you compare weights and lengths in person.",
-  },
-  {
-    q: "Can temple jewellery be worn beyond festive occasions?",
-    a: "Yes. Lighter temple jewellery designs — a single Lakshmi pendant, slim carved bangles, or small jhumkas — work beautifully with cotton and linen saris, kurtas, and even contemporary outfits for everyday and workwear.",
-  },
-  {
-    q: "Where can I find Indriya jewellery near me?",
-    a: "Use the store locator to find your nearest Indriya boutique, check its timings, and arrange an appointment before you visit.",
-  },
-];
 
 function VaralakshmiPage() {
   return (
