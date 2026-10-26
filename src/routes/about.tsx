@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import logoAsset from "@/assets/indriya-logo.png.asset.json";
 
-const CANONICAL = "https://sacred-gold-pages.lovable.app/about";
+const CANONICAL = "https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/about/";
 const TITLE = "About This Page | Indriya Student Concept Project";
 const DESCRIPTION =
   "About this student concept page: who created it, how it was researched, and how to contact the creator. Not an official Indriya store.";
@@ -40,7 +40,7 @@ export const Route = createFileRoute("/about")({
             name: "Aryan Mehta",
             description: "Student concept project; not an official Indriya store",
           },
-          dateModified: "2026-10-22",
+          dateModified: "2026-10-26",
         }),
       },
     ],
@@ -103,21 +103,16 @@ function AboutPage() {
           AI-generated, representational placeholders — no real Indriya products are shown.
         </p>
         <p className="mt-6 leading-relaxed text-muted-foreground">
-          The three assurances shown in the landing page's trust section (hallmarking, transparent
-          pricing, lifetime exchange) are labelled placeholders, pending verification against the
-          brand's live policies.
+          The landing page summarizes promises published on Indriya’s official website and links
+          readers there to check the current terms. This student project does not itself sell or
+          certify jewellery.
         </p>
         <p className="mt-6 leading-relaxed text-muted-foreground">
-          Contact:{" "}
-          <a
-            href="tel:+919920792272"
-            className="border-b border-accent pb-0.5 text-primary transition-colors hover:border-primary"
-          >
-            9920792272
-          </a>
+          For questions about this educational project, see the <Link to="/contact" className="border-b border-accent pb-0.5 text-primary">contact page</Link>.
+          For purchases or product enquiries, use the official Indriya website.
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
-          Last updated: <time dateTime="2026-10-22">22 October 2026</time>
+          Last updated: <time dateTime="2026-10-26">26 October 2026</time>
         </p>
 
         <h2 className="mt-14 text-3xl text-primary">How this page was created</h2>
@@ -164,8 +159,7 @@ function AboutPage() {
             </ul>
           </nav>
           <p className="mt-10 text-xs text-ivory/60">
-            &copy; {new Date().getFullYear()} Indriya. Student concept page created by Aryan Mehta;
-            not an official Indriya store.
+            Student concept page by Aryan Mehta; not affiliated with or operated by Indriya.
           </p>
         </div>
       </footer>
