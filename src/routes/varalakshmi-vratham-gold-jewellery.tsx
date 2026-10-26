@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { CustomerReviews } from "@/components/customer-reviews";
 import { BadgeCheck, CalendarDays, Gem, Instagram, Repeat, Youtube } from "lucide-react";
 import { templeJewelleryFaqs } from "@/lib/temple-jewellery-faqs";
 import { bridalJewelleryFaqs } from "@/lib/bridal-jewellery-faqs";
@@ -511,6 +512,8 @@ function VaralakshmiPage() {
             </p>
           </div>
         </section>
+
+        <CustomerReviews />
 
         {/* Store CTA */}
         <section className="relative isolate overflow-hidden">
