@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { BadgeCheck, Gem, Repeat } from "lucide-react";
 import { templeJewelleryFaqs } from "@/lib/temple-jewellery-faqs";
 import { bridalJewelleryFaqs } from "@/lib/bridal-jewellery-faqs";
+import { varalakshmiVrathamFaqs } from "@/lib/varalakshmi-vratham-faqs";
 
 import heroImg from "@/assets/hero-varalakshmi.jpg";
 import necklaceImg from "@/assets/cat-lakshmi-necklace.jpg";
