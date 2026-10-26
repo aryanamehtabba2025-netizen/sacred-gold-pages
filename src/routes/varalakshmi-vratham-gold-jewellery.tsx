@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { BadgeCheck, CalendarDays, Gem, Instagram, Repeat } from "lucide-react";
+import { BadgeCheck, CalendarDays, Gem, Instagram, Repeat, Youtube } from "lucide-react";
 import { templeJewelleryFaqs } from "@/lib/temple-jewellery-faqs";
 import { bridalJewelleryFaqs } from "@/lib/bridal-jewellery-faqs";
 import { varalakshmiVrathamFaqs } from "@/lib/varalakshmi-vratham-faqs";
@@ -78,7 +78,11 @@ const localBusinessSchema = {
       closes: "20:00",
     },
   ],
-  sameAs: ["https://www.instagram.com/indriyajewels/"],
+  sameAs: [
+    "https://www.instagram.com/indriyajewels/",
+    "https://x.com/indriyajewels",
+    "https://www.youtube.com/@indriyajewels",
+  ],
 };
 
 const breadcrumbSchema = {
@@ -772,15 +776,43 @@ function VaralakshmiPage() {
             loading="lazy"
             className="h-16 w-auto brightness-0 invert"
           />
-          <a
-            href="https://www.instagram.com/indriyajewels/?hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex w-fit items-center gap-2.5 rounded-full border border-gold-soft/50 px-5 py-2.5 text-sm text-ivory transition-all hover:border-gold-soft hover:bg-gold-soft/10 hover:text-gold-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-soft"
-          >
-            <Instagram aria-hidden="true" className="h-5 w-5" />
-            Follow us on Instagram · instagram.com/indriyajewels
-          </a>
+          <nav aria-label="Social media" className="mt-8">
+            <ul className="flex flex-wrap gap-3">
+              {[
+                {
+                  label: "Follow us on Instagram · instagram.com/indriyajewels",
+                  href: "https://www.instagram.com/indriyajewels/?hl=en",
+                  icon: <Instagram aria-hidden="true" className="h-5 w-5" />,
+                },
+                {
+                  label: "Follow us on X · x.com/indriyajewels",
+                  href: "https://x.com/indriyajewels?lang=en",
+                  icon: (
+                    <span aria-hidden="true" className="text-base font-bold leading-none">
+                      X
+                    </span>
+                  ),
+                },
+                {
+                  label: "Follow us on YouTube · youtube.com/@indriyajewels",
+                  href: "https://www.youtube.com/@indriyajewels",
+                  icon: <Youtube aria-hidden="true" className="h-5 w-5" />,
+                },
+              ].map((s) => (
+                <li key={s.href}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-fit items-center gap-2.5 rounded-full border border-gold-soft/50 px-5 py-2.5 text-sm text-ivory transition-all hover:border-gold-soft hover:bg-gold-soft/10 hover:text-gold-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-soft"
+                  >
+                    {s.icon}
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <nav aria-label="Footer" className="mt-8">
             <ul className="grid gap-4 text-sm sm:grid-cols-3 lg:grid-cols-4">
               {[
