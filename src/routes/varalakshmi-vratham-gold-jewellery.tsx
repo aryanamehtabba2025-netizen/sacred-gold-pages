@@ -97,6 +97,8 @@ export const Route = createFileRoute("/varalakshmi-vratham-gold-jewellery")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "article" },
       { property: "og:url", content: CANONICAL },
+      { property: "article:published_time", content: "2026-10-26" },
+      { property: "article:modified_time", content: "2026-10-26" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
@@ -252,6 +254,14 @@ function VaralakshmiPage() {
                   </a>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/about"
+                  className="text-xs uppercase tracking-[0.14em] text-muted-foreground hover:text-primary"
+                >
+                  About
+                </Link>
+              </li>
             </ul>
           </nav>
           <Button
@@ -274,6 +284,14 @@ function VaralakshmiPage() {
                 </a>
               </li>
             ))}
+            <li className="shrink-0">
+              <Link
+                to="/about"
+                className="text-xs uppercase tracking-[0.14em] text-muted-foreground hover:text-primary"
+              >
+                About
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -330,7 +348,7 @@ function VaralakshmiPage() {
           <div aria-hidden="true" className="mx-auto h-px w-24 rule-gold" />
           <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
             By <span className="text-primary">Aryan Mehta</span> <span aria-hidden="true">·</span>{" "}
-            Published <time dateTime="2026-10-26">26 October 2026</time>{" "}
+            Published on <time dateTime="2026-10-26">26 October 2026</time>{" "}
             <span aria-hidden="true">·</span> Updated{" "}
             <time dateTime="2026-10-26">26 October 2026</time> <span aria-hidden="true">·</span>{" "}
             Student concept page <span aria-hidden="true">·</span>{" "}
