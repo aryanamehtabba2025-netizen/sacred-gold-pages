@@ -4,7 +4,7 @@
 
 ## Pages
 
-- [Varalakshmi Vratham Gold Jewellery](/varalakshmi-vratham-gold-jewellery): The main landing page — sacred-celebration jewellery categories, craftsmanship notes, trust and store links, and jewellery FAQs.
-- [Temple Jewellery Guide](/temple-jewellery-guide): An educational guide to temple jewellery motifs, South Indian bridal styling, and practical care, with sources.
-- [About This Page](/about): Who created this student concept page, how it was researched, and how to contact the creator.
-- [Contact](/contact): How to reach the creator of this page by phone.
+- [Varalakshmi Vratham Gold Jewellery](https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/varalakshmi-vratham-gold-jewellery/): The main landing page, with illustrative categories and jewellery FAQs.
+- [Temple Jewellery Guide](https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/temple-jewellery-guide/): An educational guide to temple jewellery motifs, styling and care, with sources.
+- [About This Page](https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/about/): Who created this student concept page and how it was researched.
+- [Contact](https://aryanamehtabba2025-netizen.github.io/sacred-gold-pages/contact/): Project contact guidance and the official brand website for product enquiries.
