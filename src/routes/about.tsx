@@ -39,7 +39,7 @@ export const Route = createFileRoute("/about")({
             name: "Aryan Mehta",
             description: "Student concept project; not an official Indriya store",
           },
-          datePublished: "2026-10-21",
+          datePublished: "2026-10-26",
           dateModified: "2026-10-26",
         }),
       },
@@ -120,7 +120,7 @@ function AboutPage() {
           . For purchases or product enquiries, use the official Indriya website.
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
-          Published: <time dateTime="2026-10-21">21 October 2026</time> · Updated:{" "}
+          Published: <time dateTime="2026-10-26">26 October 2026</time> · Updated:{" "}
           <time dateTime="2026-10-26">26 October 2026</time>
         </p>
 
